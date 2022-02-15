@@ -34,3 +34,19 @@ https://forum.openwrt.org/t/build-error-gcc-10-x-solved-pls-fix-on-repo/68942 - 
 https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-gnueabihf/ - oryginal toolchain wasn't working becouse of "this compiler is known to cause problems", so this is the source for a newer one
 
 #### https://www.mobileread.com/forums/showthread.php?t=340418 - How to switch OTG mode to host on kobo
+
+## Notes
+### Usb controler:
+The usb controler is ChipIdea Highspeed Dual Role Controller Driver, the module is ci_hdrc
+```
+<*>   ChipIdea Highspeed Dual Role Controller
+  [*]     ChipIdea device controller
+  [*]     ChipIdea host controller
+```
+Some links:
+https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
+
+### My looking for help:
+https://github.com/kobolabs/Kobo-Reader/issues/116
+
+https://www.mobileread.com
