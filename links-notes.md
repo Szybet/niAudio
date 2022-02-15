@@ -46,7 +46,7 @@ The usb controler is ChipIdea Highspeed Dual Role Controller Driver, the module 
 Some links:
 https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
 
-### My looking for help:
+### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
 https://www.mobileread.com
