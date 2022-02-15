@@ -26,6 +26,8 @@ https://github.com/olup/kobowriter - keyboard + kobo so implements otg
 
 https://github.com/Kobo-InkBox/kernel - custom kernels for kobo, seems interesting
 
+https://pgaskin.net/KoboStuff/kobofirmware.html - kobo firmware copies
+
 ## Fixes:
 https://forum.openwrt.org/t/build-error-gcc-10-x-solved-pls-fix-on-repo/68942 - the oryginal kernel wasn't compiling, this was needed
 
