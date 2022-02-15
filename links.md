@@ -1,7 +1,8 @@
 # Links that are useful / helped me to achieve next steps in my project
 ## Sound card hardware:
 https://www.instructables.com/USB-Sound-Card/ - example sound card
-Texas Instrument PCM2912A,  IC
+
+Texas Instrument PCM2912A, **PCM2704** IC
 
 ## Kobo hardware:
 http://gethighstayhigh.co.uk/kobo-self-build/ - modding kobo for xcsoar
