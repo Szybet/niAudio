@@ -1,0 +1,3123 @@
+ooting Linux on physical CPU 0x0
+Linux version 4.1.154.1.15-szybet (szybet@ArchSzybet) (gcc version 4.9.4 (Linaro GCC 4.9-2017.01) ) #4 SMP PREEMPT Mon Feb 14 20:03:51 CET 2022
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+Memory policy: Data cache writealloc
+On node 0 totalpages: 65280
+free_area_init_node: node 0, pgdat 80834540, node_mem_map 8fbf7000
+  Normal zone: 508 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 65024 pages, LIFO batch:15
+  HighMem zone: 256 pages, LIFO batch:0
+PERCPU: Embedded 12 pages/cpu @8fbcf000 s16960 r8192 d24000 u49152
+pcpu-alloc: s16960 r8192 d24000 u49152 alloc=12*4096
+pcpu-alloc: [0] 0 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 249856K/261120K available (5626K kernel code, 229K rwdata, 2140K rodata, 376K init, 380K bss, 11264K reserved, 0K cma-reserved, 1024K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+    lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x8079dc08   (7768 kB)
+      .init : 0x8079e000 - 0x807fc000   ( 376 kB)
+      .data : 0x807fc000 - 0x80835620   ( 230 kB)
+       .bss : 0x80838000 - 0x80897098   ( 381 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+        Additional per-CPU info printed with stalls.
+        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS:16 nr_irqs:16 16
+mxc_clocksource_init 24000000
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+/cpus/cpu@0 missing clock-frequency property
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80008280 - 0x800082d8
+Brought up 1 CPUs
+SMP: Total of 1 processors activated (48.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+hwcfg_size_setup() hwcfg_szie=110
+***_MemoryRequest:48: request memory region! addr=8ffffe00, len=110***
+hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+boot_port_setup() boot_port=1
+ntxfw_size_setup() ntxfw_size=1034
+***_MemoryRequest:48: request memory region! addr=8ff71400, len=1034***
+ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+mxs-dma 1804000.dma-apbh: initialized
+PMU: ricoh61x_i2c_init:
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+sy7636_probe calling
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+sy7636_detect calling
+sy7636_detect():opmode=0x0
+sy7636_detect success
+sy7636 0-0062: PMIC SY7636 for eInk display
+sy7636_probe success
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-0: can't use DMA
+PMU: ricoh61x_i2c_probe:
+ricoh61x_pre_init,line=956
+ricoh61x irq gpio 129
+invalid sleep gpio: -2
+invalid dc_det gpio: -2
+ricoh61x chg gpio 128
+ricoh61x bat_low gpio 131
+PMU: ricoh61x_irq_init: g_full_flag: 0, CHGSTS1: 0x00
+ricoh61x_irq_init: ricoh619_pmic_irq=1
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.20
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+PMU: ricoh61x_regulator_init
+PMU: ricoh61x_regulator_probe
+RICOH619_DC1 at 900000uv suspend
+RICOH619_DC2 at 3000000uv suspend
+RICOH619_DC4 at 1140000uv suspend
+RICOH619_DC5 at 1700000uv suspend
+RICOH619_LDO2 at 3000000uv suspend
+sy7636-pmic sy7636-pmic: num_regulators 4
+sy7636-pmic sy7636-pmic: on_delay1=0x2
+sy7636-pmic sy7636-pmic: on_delay2=0x2
+sy7636-pmic sy7636-pmic: on_delay3=0x2
+sy7636-pmic sy7636-pmic: on_delay4=0x2
+sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606872
+sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+sy7636_regulator_probe(1014): SY7636@8c17a700
+sy7636_regulator_probe():initial vcom=-2500000uV
+ _sy7636_vcom_get_voltage() : vcom=-2500000uV
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+sy7636_get_temperature():temperature = 0,reg=0x0
+sy7636_get_temperature():temperature = 0,reg=0x0
+PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode
+PMU RTC: we never using periodic function and interrupt
+ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x20
+PMU: ricoh61x_rtc_alarm_enable :0
+PMU: ricoh61x_rtc_probe register rtc device
+PMU: ricoh61x_rtc_read_alarm
+rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 2/15/2022 8:56:40 *****
+rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0
+[ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60
+PMU: ricoh61x_rtc_alarm_enable :0
+RICOH61x RTC Register Success
+Switched to clocksource mxc_timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+imx rpmsg driver is registered.
+Bus freq driver module loaded
+futex hash table entries: 256 (order: 2, 16384 bytes)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+imx-weim 21b8000.weim: Driver registered.
+lm3630a_bl_parse_dt pchip=8c1e0910,hwen_gpio 91
+lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+imx-sdma 20ec000.sdma: no event needs to be remapped
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+imx-sdma 20ec000.sdma: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+imx-rng 2284000.rngb: iMX RNG Registered.
+imx sema4 driver is registered.
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+2184000.usb supply vbus not found, using dummy regulator
+mousedev: PS/2 mouse device common for all mice
+input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[__elan_touch_init-361] firmware version 52 01 2C 31 (12C3)
+[__elan_touch_init-368] firmware ID 52 F1 B5 01 (1B50)
+[__elan_touch_init-400] boot code version  52 05 56 81
+[__elan_touch_init-405] x resolution: 1436 
+[__elan_touch_init-410] y resolution: 1920 
+input: elan-touch as /devices/virtual/input/input1
+elan ts starts in interrupt mode.
+cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+i2c /dev entries driver
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 800217f0 ntx_machine_poweroff
+syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+PMU: ricoh61x_battery_init
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+ricoh619_battery_dt_init type_n=0
+ricoh619-battery ricoh619-battery: alarm_vol_mv=3250
+ricoh619-battery ricoh619-battery: fg_poff_vbat=3350
+ricoh61x_battery_probe type_n=0,temp is 1
+ricoh61x_battery_probe() TempDetect=0
+ricoh61x_battery_probe info->num=7,temp is 8
+PMU FG_RESET : ricoh61x_init_battery : initial pswr = 98
+PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x10 
+PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00 
+PMU : ricoh61x_init_battery : off is 456921, on is 456921, period is 0, fpon_flag is 0
+PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV
+PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV
+PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV
+PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV
+PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV
+PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV
+PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV
+PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV
+PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV
+PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV
+PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV
+PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179
+PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of range(3431000) 
+PMU : ricoh61x_scaling_OCV_table : new table
+PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v
+PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x8
+PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is 0xff info->ch_icchg is 0x1
+PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg is 0xff info->ch_vfchg is 0xff 
+PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x48,when interrupt is comming
+PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100
+PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg 100 rbat 278
+PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV
+PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV
+PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV
+PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV
+PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV
+PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV
+PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV
+PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV
+PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV
+PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV
+PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV
+calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .
+measure_vbatt_ADC():4095000 uV
+==== calc_soc_by_voltageMethod E60U22 ====
+PMU : calc_soc_by_voltageMethod : VBAT is 4095000 [uV], soc is 9500 [0.01%] ----------
+usb plugged 1
+PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH
+Create pmic_battery.1 in platform
+sy7636_sensor_probe starting
+sy7636_sensor_probe success
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+Bluetooth: Virtual HCI driver ver 1.5
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol Three-wire (H5) registered
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+/soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+/soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+led_classdev_register():led_cdev->name=GLED,name=GLED
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+fsl-asrc 2034000.asrc: driver registered
+NET: Registered protocol family 17
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+lib80211: common routines for IEEE802.11 drivers
+lib80211_crypt: registered algorithm 'NULL'
+lib80211_crypt: registered algorithm 'WEP'
+lib80211_crypt: registered algorithm 'CCMP'
+lib80211_crypt: registered algorithm 'TKIP'
+ntx_wifi_bt_power_init() : done 
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+Wifi already off.
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+mmc0: host does not support reading read-only switch, assuming write-enable
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758 
+imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SS16G 14.8 GiB 
+ mmcblk0: p1 p2 p3
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+waveform_size_setup() wf_size=582529
+***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+waveform_p_setup() wf_p=8ff71a00,vaddr=90f00a00,size=582529
+mxc_epdc_fb_init_hw(7479)
+[epdc_firmware_work_func]:fw p=90f00a00,size=582529,fb_data@8c4f0000,pdata=80811e18
+mxc_epdc_fb_fw_handler(6995),fw=8c193ee8
+mxc_epdc_fb_fw_handler(): fw p=90f00a00,size=582529
+imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R345_ADFB11_ED060XH7U4_VB3300-FOC_TC
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+EPD QOS_WR 0x7, QOS_RD 0x7
+fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,DisplayResolution=1
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+Power:do-not-wakeup-hibernation=0
+Hall:do-not-wakeup-hibernation=0
+_sy7636_vcom_get_voltage() : vcom=-2790000uV
+rtc_ricoh619 rtc_ricoh619: setting system clock to 2022-02-15 09:17:30 UTC (1644916650)
+TMST_SY7636: disabling
+sy7636_get_temperature():temperature = 29,reg=0x1d
+RICOH619_LDORTC2: disabling
+RICOH619_LDORTC1: disabling
+RICOH619_LDO10: disabling
+RICOH619_LDO9: disabling
+RICOH619_LDO4: disabling
+RICOH619_LDO3: disabling
+RICOH619_LDO1: disabling
+SD1_SPWR: disabling
+vref-3v3: disabling
+ALSA device list:
+  No soundcards found.
+EXT4-fs (mmcblk0p1): warning: maximal mount count reached, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): recovery complete
+EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:1.
+devtmpfs: mounted
+Freeing unused kernel memory: 376K (8079e000 - 807fc000)
+EXT4-fs (mmcblk0p1): re-mounted. Opts: (null)
+udevd (92): /proc/92/oom_adj is deprecated, please use /proc/92/oom_score_adj instead.
+imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(9868)[mAs], cc_sum_dec(9868)
+PMU: ricoh61x_displayed_work : dsoc_temp(9800), soc(9800), cc_delta(30)
+PMU: ricoh61x_displayed_work : status(0), rsoc_ready_flag(0)
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 30
+PMU:check_charge_status_2 2nd P-On init_pswr(98), cc(30)
+PMU : set_current_time2register : second is 1644916652, hour is 456921
+PMU FG_RESET : calc_capacity_2 : capacity 9830 init_pswr 98 cc_delta 30
+PMU FG_RESET : ricoh61x_displayed_work : initial  dsoc  is  9800
+PMU : set_current_time2register : second is 1644916652, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(9868)[mAs], cc_sum_dec(9868)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(30)
+PMU:STATUS= 3: IBAT= 146: VSYS= 4336000: VBAT= 4124500: DSOC= 9800: RSOC= 9800: cc_delta=30: rrf= 0
+PMU: ricoh61x_rtc_alarm_enable :0
+random: dbus-uuidgen urandom read with 55 bits of entropy available
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 35
+PMU FG_RESET : calc_capacity_2 : capacity 9835 init_pswr 98 cc_delta 35
+PMU: ricoh61x_displayed_work 1st last_soc_full(0), cc_delta=0
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9835: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9835: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 146: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 0: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 0: 0: IBAT= 146: DSOC= 9800: RSOC= 9835:
+PMU : set_current_time2register : second is 1644916662, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(11320)[mAs], cc_sum_dec(11320)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(35)
+PMU:STATUS= 6: IBAT= 146: VSYS= 4336000: VBAT= 4124500: DSOC= 9800: RSOC= 9800: cc_delta=35: rrf= 0
+ntx_power_key_hook():state=0
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+random: nonblocking pool is initialized
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan country code:"PL" with chplan:0x26
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (138, 10ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 320ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (1, 0ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 420 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x26, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+RTL871X: module init ret=0
+[_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+imx_epdc_v2_fb 228c000.epdc: mxc_epdc_fb_set_pwrdown_delay(),pwrdwn_delay=100,info=8c4f0000,g_fb_data=8c4f0000,info->par=8c4f0000 
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 20ms
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 700ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ�>C�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+RTL871X: survey done event(20) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:2
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:2
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 210ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 740ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:3
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:3
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (146, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(21) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:4
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:4
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 47
+PMU FG_RESET : calc_capacity_2 : capacity 9847 init_pswr 98 cc_delta 47
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9847: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9847: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 142: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 12: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 142: DSOC= 9803: RSOC= 9847:
+PMU : set_current_time2register : second is 1644916691, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(15425)[mAs], cc_sum_dec(15425)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(47)
+PMU:STATUS= 6: IBAT= 142: VSYS= 4308000: VBAT= 4107375: DSOC= 9803: RSOC= 9800: cc_delta=47: rrf= 0
+RTL871X: survey done event(1f) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:5
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:5
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇, len=32
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇𞲌
+                       �^�▒�] fw_state=0x00000808
+RTL871X: Set SSID under fw_state=0x00000808
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE
+RTL871X: indicate disassoc
+RTL871X: -871x_drv - drv_close, bup=1
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+RTL871X: module exit start
+RTL871X: ==== rtw_dev_remove sleep 1000 ms ====
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable file: /dev/mmcblk0p3
+Number of LUNs=1
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:6
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 10ms
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+RTL871X: rtw_ndev_uninit(eth0) if1
+RTL871X: ### Clean STA_(1) info ###
+RTL871X: rtw_sdio_if1_deinit wowlan_mode:0
+RTL871X: ===> rtw_dev_unload
+RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at line 581
+RTL871X: CheckIPSStatus(): Read 0x100=0xea 0x86=0x00
+RTL871X: rtw_dev_unload: driver in IPS-FWLPS
+RTL871X: <=== rtw_dev_unload
+RTL871X: +r871xu_dev_remove, hw_init_completed=0
+RTL871X: module exit success
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+mmc1: card 0001 removed
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: module init ret=0
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan country code:"PL" with chplan:0x26
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (139, 10ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 280ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (2, 10ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 390 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x26, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+sy7636_get_temperature():temperature = 29,reg=0x1d
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (136, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ��F�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 840ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(1d) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:2
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 20ms
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+ntx_power_key_hook():state=0
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 60
+PMU FG_RESET : calc_capacity_2 : capacity 9860 init_pswr 98 cc_delta 60
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 13: current_soc= 9860: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 13: current_soc= 9860: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 138: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 13: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 138: DSOC= 9806: RSOC= 9860:
+PMU : set_current_time2register : second is 1644916720, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(19440)[mAs], cc_sum_dec(19440)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(60)
+PMU:STATUS= 6: IBAT= 138: VSYS= 4314250: VBAT= 4101600: DSOC= 9806: RSOC= 9800: cc_delta=60: rrf= 0
+RTL871X: -871x_drv - drv_close, bup=1
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:2
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: module exit start
+RTL871X: ==== rtw_dev_remove sleep 1000 ms ====
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 710ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇, len=32
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇�;�
+                         �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: rtw_ndev_uninit(eth0) if1
+RTL871X: rtw_pm_set_ips IPS_NONE
+RTL871X: ### Clean STA_(1) info ###
+RTL871X: rtw_sdio_if1_deinit wowlan_mode:0
+RTL871X: ===> rtw_dev_unload
+RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at line 581
+RTL871X: CheckIPSStatus(): Read 0x100=0xff 0x86=0x00
+RTL871X: rtw_dev_unload: driver not in IPS
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_dev_unload
+RTL871X: +r871xu_dev_remove, hw_init_completed=0
+RTL871X: module exit success
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+mmc1: card 0001 removed
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan chplan:0x20
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (2, 10ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 250 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+RTL871X: module init ret=0
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ�>}�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 72
+PMU FG_RESET : calc_capacity_2 : capacity 9872 init_pswr 98 cc_delta 72
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9872: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9872: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 135: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 12: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 135: DSOC= 9809: RSOC= 9872:
+PMU : set_current_time2register : second is 1644916749, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(23352)[mAs], cc_sum_dec(23352)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(72)
+PMU:STATUS= 6: IBAT= 135: VSYS= 4299500: VBAT= 4096400: DSOC= 9809: RSOC= 9800: cc_delta=72: rrf= 0
+RTL871X: survey done event(1f) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: wpa_set_auth_algs, AUTH_ALG_OPEN_SYSTEM
+RTL871X: _rtw_pwr_wakeup wait ps_processing...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 30ms
+RTL871X: _rtw_pwr_wakeup wait ps_processing done
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 700ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: 
+ wpa_ie(length:22):
+RTL871X: 0x30 0x14 0x01 0x00 0x00 0x0f 0xac 0x02 
+RTL871X: 0x01 0x00 0x00 0x0f 0xac 0x04 0x01 0x00 
+RTL871X: 0x00 0x0f 0xac 0x02 0x00 0x00 0x00 0x00 
+RTL871X: SetHwReg8188F, 5958, RCR= 700060ca
+RTL871X: rtw_wx_set_freq: set to channel 1
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=hotspotttssss, len=13
+RTL871X: set ssid [hotspotttssss] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: [by_bssid:0][assoc_ssid:hotspotttssss][to_roam:0] new candidate: hotspotttssss(0c:54:15:1c:2c:8a, ch1) rssi:-44
+RTL871X: rtw_select_and_join_from_scanned_queue: candidate: hotspotttssss(0c:54:15:1c:2c:8a, ch:1)
+RTL871X: link to new AP
+RTL871X: [HT] HAL Support STBC = 0x01
+RTL871X: [HT] Declare supporting RX STBC = 1
+RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0
+RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: set bssid:0c:54:15:1c:2c:8a
+RTL871X: Set BSSID under fw_state=0x00000088
+RTL871X: OnBeacon: beacon keys ready
+RTL871X: link to new AP
+RTL871X: start auth
+RTL871X: issue_auth
+RTL871X: OnAuthClient
+RTL871X: auth success, start assoc
+RTL871X: network.SupportedRates[0]=82
+RTL871X: network.SupportedRates[1]=84
+RTL871X: network.SupportedRates[2]=8B
+RTL871X: network.SupportedRates[3]=96
+RTL871X: network.SupportedRates[4]=0C
+RTL871X: network.SupportedRates[5]=12
+RTL871X: network.SupportedRates[6]=18
+RTL871X: network.SupportedRates[7]=24
+RTL871X: network.SupportedRates[8]=30
+RTL871X: network.SupportedRates[9]=48
+RTL871X: network.SupportedRates[10]=60
+RTL871X: network.SupportedRates[11]=6C
+RTL871X: bssrate_len = 12
+RTL871X: OnAssocRsp
+RTL871X: report_join_res(1)
+RTL871X: rtw_joinbss_update_network
+RTL871X: +rtw_update_ht_cap()
+RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:0c:54:15:1c:2c:8a macid:0
+RTL871X: rtw_joinbss_update_stainfo
+RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff
+RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3
+RTL871X: ### Set STA_(0) info ###
+RTL871X: assoc success
+RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f
+RTL871X: WMM(0): 0, a42b
+RTL871X: WMM(1): 0, a44f
+RTL871X: WMM(2): 0, 5e4322
+RTL871X: WMM(3): 0, 2f3222
+RTL871X: wmm_para_seq(0): 0
+RTL871X: wmm_para_seq(1): 1
+RTL871X: wmm_para_seq(2): 2
+RTL871X: wmm_para_seq(3): 3
+RTL871X: HTOnAssocRsp
+RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitmap:0x000ff005
+RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+         ==> rssi_level:0, rate_bitmap:0x000ff005
+RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005
+RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=0x13
+RTL871X: recv eapol packet
+RTL871X: send eapol packet
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000000
+RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+RTL871X: LocPsPoll: 2
+RTL871X: LocNullData: 3
+RTL871X: LocQosNull: 4
+RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)
+RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(578), TotalPageNum(5)
+RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+RTL871X: phydm_rssi_report mac_id:0, mac:0c:54:15:1c:2c:8a, rssi:60
+RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:True, Firstcont:True
+RTL871X: recv eapol packet
+RTL871X: send eapol packet
+RTL871X:  ~~~~set sta key:unicastkey
+RTL871X:  ~~~~set sta key:groupkey
+RTL871X: ==> rtw_set_key algorithm(2),keyid(2),key_mask(0)
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+RTL871X: set pairwise key camid:4, addr:0c:54:15:1c:2c:8a, kid:0, type:AES
+RTL871X: set group key camid:5, addr:0c:54:15:1c:2c:8a, kid:2, type:TKIP
+RTL871X: SetHwReg8188F, 5951, RCR= 700060ce
+RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitmap:0x000f0000
+RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+         ==> rssi_level:1, rate_bitmap:0x000f0000
+RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000
+RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=0x13
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+RTL871X: do rtw_gw_addr_query()RTL871X: rtw_gw_addr_query Gateway Mac:  0c:54:15:1c:2c:8a
+RTL871X: rtw_gw_addr_query Gateway IP:  10.42.0.1
+RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=1 len=4
+RTL871X: rtw_wx_get_rts, rts_thresh=2347
+RTL871X: rtw_wx_get_frag, frag_len=2346
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 58
+RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 56
+RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=56
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 56
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 57
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 60
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 83
+PMU FG_RESET : calc_capacity_2 : capacity 9883 init_pswr 98 cc_delta 83
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 11: current_soc= 9883: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 11: current_soc= 9883: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 130: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 11: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 130: DSOC= 9812: RSOC= 9883:
+PMU : set_current_time2register : second is 1644916778, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(27152)[mAs], cc_sum_dec(27152)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(83)
+PMU:STATUS= 6: IBAT= 130: VSYS= 4301500: VBAT= 4096400: DSOC= 9812: RSOC= 9800: cc_delta=83: rrf= 0
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 57
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: OnAction_back
+RTL871X: OnAction_back, action=0
+RTL871X: issue_addba_rsp(eth0) ra=0c:54:15:1c:2c:8a status=0, tid=2, size=16
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[root@kobo ~]# mount -t debugfs none /sys/kernel/debug
+[root@kobo ~]# ls
+KoboRoot    dev         etc         lib         linuxrc     mnt         root        sys         usr
+bin         drivers     fs.md5sum   libexec     lost+found  proc        sbin        tmp         var
+[root@kobo ~]# cd /sys/kernel/debug/
+[root@kobo debug]# ls
+asoc                dma_buf             hid                 mmc1                regulator           wakeup_sources
+bdi                 dri                 ieee80211           pinctrl             ricoh61x
+bluetooth           extfrag             iio                 pm_qos              sleep_time
+ci_hdrc.0           fault_around_bytes  memblock            pwm                 suspend_stats
+clk                 gpio                mmc0                regmap              usb
+[root@kobo debug]# cd ci_hdrc.0/
+[root@kobo ci_hdrc.0]# echo host > role
+[root@kobo ci_hdrc.0]# dmesg
+Booting Linux on physical CPU 0x0
+Linux version 4.1.154.1.15-szybet (szybet@ArchSzybet) (gcc version 4.9.4 (Linaro GCC 4.9-2017.01) ) #4 SMP PREEMPT Mon Feb 14 20:03:51 CET 2022
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+Memory policy: Data cache writealloc
+On node 0 totalpages: 65280
+free_area_init_node: node 0, pgdat 80834540, node_mem_map 8fbf7000
+  Normal zone: 508 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 65024 pages, LIFO batch:15
+  HighMem zone: 256 pages, LIFO batch:0
+PERCPU: Embedded 12 pages/cpu @8fbcf000 s16960 r8192 d24000 u49152
+pcpu-alloc: s16960 r8192 d24000 u49152 alloc=12*4096
+pcpu-alloc: [0] 0 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 249856K/261120K available (5626K kernel code, 229K rwdata, 2140K rodata, 376K init, 380K bss, 11264K reserved, 0K cma-reserved, 1024K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+    lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x8079dc08   (7768 kB)
+      .init : 0x8079e000 - 0x807fc000   ( 376 kB)
+      .data : 0x807fc000 - 0x80835620   ( 230 kB)
+       .bss : 0x80838000 - 0x80897098   ( 381 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+        Additional per-CPU info printed with stalls.
+        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS:16 nr_irqs:16 16
+mxc_clocksource_init 24000000
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+/cpus/cpu@0 missing clock-frequency property
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80008280 - 0x800082d8
+Brought up 1 CPUs
+SMP: Total of 1 processors activated (48.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+hwcfg_size_setup() hwcfg_szie=110
+***_MemoryRequest:48: request memory region! addr=8ffffe00, len=110***
+hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+boot_port_setup() boot_port=1
+ntxfw_size_setup() ntxfw_size=1034
+***_MemoryRequest:48: request memory region! addr=8ff71400, len=1034***
+ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+mxs-dma 1804000.dma-apbh: initialized
+PMU: ricoh61x_i2c_init:
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+sy7636_probe calling
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+sy7636_detect calling
+sy7636_detect():opmode=0x0
+sy7636_detect success
+sy7636 0-0062: PMIC SY7636 for eInk display
+sy7636_probe success
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-0: can't use DMA
+PMU: ricoh61x_i2c_probe:
+ricoh61x_pre_init,line=956
+ricoh61x irq gpio 129
+invalid sleep gpio: -2
+invalid dc_det gpio: -2
+ricoh61x chg gpio 128
+ricoh61x bat_low gpio 131
+PMU: ricoh61x_irq_init: g_full_flag: 0, CHGSTS1: 0x00
+ricoh61x_irq_init: ricoh619_pmic_irq=1
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.20
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+PMU: ricoh61x_regulator_init
+PMU: ricoh61x_regulator_probe
+RICOH619_DC1 at 900000uv suspend
+RICOH619_DC2 at 3000000uv suspend
+RICOH619_DC4 at 1140000uv suspend
+RICOH619_DC5 at 1700000uv suspend
+RICOH619_LDO2 at 3000000uv suspend
+sy7636-pmic sy7636-pmic: num_regulators 4
+sy7636-pmic sy7636-pmic: on_delay1=0x2
+sy7636-pmic sy7636-pmic: on_delay2=0x2
+sy7636-pmic sy7636-pmic: on_delay3=0x2
+sy7636-pmic sy7636-pmic: on_delay4=0x2
+sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606872
+sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+sy7636_regulator_probe(1014): SY7636@8c17a700
+sy7636_regulator_probe():initial vcom=-2500000uV
+ _sy7636_vcom_get_voltage() : vcom=-2500000uV
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+sy7636_get_temperature():temperature = 0,reg=0x0
+sy7636_get_temperature():temperature = 0,reg=0x0
+PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode
+PMU RTC: we never using periodic function and interrupt
+ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x20
+PMU: ricoh61x_rtc_alarm_enable :0
+PMU: ricoh61x_rtc_probe register rtc device
+PMU: ricoh61x_rtc_read_alarm
+rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 2/15/2022 8:56:40 *****
+rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0
+[ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60
+PMU: ricoh61x_rtc_alarm_enable :0
+RICOH61x RTC Register Success
+Switched to clocksource mxc_timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+imx rpmsg driver is registered.
+Bus freq driver module loaded
+futex hash table entries: 256 (order: 2, 16384 bytes)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+imx-weim 21b8000.weim: Driver registered.
+lm3630a_bl_parse_dt pchip=8c1e0910,hwen_gpio 91
+lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+imx-sdma 20ec000.sdma: no event needs to be remapped
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+imx-sdma 20ec000.sdma: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+imx-rng 2284000.rngb: iMX RNG Registered.
+imx sema4 driver is registered.
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+2184000.usb supply vbus not found, using dummy regulator
+mousedev: PS/2 mouse device common for all mice
+input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[__elan_touch_init-361] firmware version 52 01 2C 31 (12C3)
+[__elan_touch_init-368] firmware ID 52 F1 B5 01 (1B50)
+[__elan_touch_init-400] boot code version  52 05 56 81
+[__elan_touch_init-405] x resolution: 1436 
+[__elan_touch_init-410] y resolution: 1920 
+input: elan-touch as /devices/virtual/input/input1
+elan ts starts in interrupt mode.
+cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+i2c /dev entries driver
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 800217f0 ntx_machine_poweroff
+syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+PMU: ricoh61x_battery_init
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+ricoh619_battery_dt_init type_n=0
+ricoh619-battery ricoh619-battery: alarm_vol_mv=3250
+ricoh619-battery ricoh619-battery: fg_poff_vbat=3350
+ricoh61x_battery_probe type_n=0,temp is 1
+ricoh61x_battery_probe() TempDetect=0
+ricoh61x_battery_probe info->num=7,temp is 8
+PMU FG_RESET : ricoh61x_init_battery : initial pswr = 98
+PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x10 
+PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00 
+PMU : ricoh61x_init_battery : off is 456921, on is 456921, period is 0, fpon_flag is 0
+PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV
+PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV
+PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV
+PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV
+PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV
+PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV
+PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV
+PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV
+PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV
+PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV
+PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV
+PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179
+PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of range(3431000) 
+PMU : ricoh61x_scaling_OCV_table : new table
+PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v
+PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x8
+PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is 0xff info->ch_icchg is 0x1
+PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg is 0xff info->ch_vfchg is 0xff 
+PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x48,when interrupt is comming
+PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100
+PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg 100 rbat 278
+PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV
+PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV
+PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV
+PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV
+PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV
+PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV
+PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV
+PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV
+PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV
+PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV
+PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV
+calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .
+measure_vbatt_ADC():4095000 uV
+==== calc_soc_by_voltageMethod E60U22 ====
+PMU : calc_soc_by_voltageMethod : VBAT is 4095000 [uV], soc is 9500 [0.01%] ----------
+usb plugged 1
+PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH
+Create pmic_battery.1 in platform
+sy7636_sensor_probe starting
+sy7636_sensor_probe success
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+Bluetooth: Virtual HCI driver ver 1.5
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol Three-wire (H5) registered
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+/soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+/soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+led_classdev_register():led_cdev->name=GLED,name=GLED
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+fsl-asrc 2034000.asrc: driver registered
+NET: Registered protocol family 17
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+lib80211: common routines for IEEE802.11 drivers
+lib80211_crypt: registered algorithm 'NULL'
+lib80211_crypt: registered algorithm 'WEP'
+lib80211_crypt: registered algorithm 'CCMP'
+lib80211_crypt: registered algorithm 'TKIP'
+ntx_wifi_bt_power_init() : done 
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+Wifi already off.
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+mmc0: host does not support reading read-only switch, assuming write-enable
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758 
+imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SS16G 14.8 GiB 
+ mmcblk0: p1 p2 p3
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+waveform_size_setup() wf_size=582529
+***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+waveform_p_setup() wf_p=8ff71a00,vaddr=90f00a00,size=582529
+mxc_epdc_fb_init_hw(7479)
+[epdc_firmware_work_func]:fw p=90f00a00,size=582529,fb_data@8c4f0000,pdata=80811e18
+mxc_epdc_fb_fw_handler(6995),fw=8c193ee8
+mxc_epdc_fb_fw_handler(): fw p=90f00a00,size=582529
+imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R345_ADFB11_ED060XH7U4_VB3300-FOC_TC
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+EPD QOS_WR 0x7, QOS_RD 0x7
+fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,DisplayResolution=1
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+Power:do-not-wakeup-hibernation=0
+Hall:do-not-wakeup-hibernation=0
+_sy7636_vcom_get_voltage() : vcom=-2790000uV
+rtc_ricoh619 rtc_ricoh619: setting system clock to 2022-02-15 09:17:30 UTC (1644916650)
+TMST_SY7636: disabling
+sy7636_get_temperature():temperature = 29,reg=0x1d
+RICOH619_LDORTC2: disabling
+RICOH619_LDORTC1: disabling
+RICOH619_LDO10: disabling
+RICOH619_LDO9: disabling
+RICOH619_LDO4: disabling
+RICOH619_LDO3: disabling
+RICOH619_LDO1: disabling
+SD1_SPWR: disabling
+vref-3v3: disabling
+ALSA device list:
+  No soundcards found.
+EXT4-fs (mmcblk0p1): warning: maximal mount count reached, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): recovery complete
+EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:1.
+devtmpfs: mounted
+Freeing unused kernel memory: 376K (8079e000 - 807fc000)
+EXT4-fs (mmcblk0p1): re-mounted. Opts: (null)
+udevd (92): /proc/92/oom_adj is deprecated, please use /proc/92/oom_score_adj instead.
+imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(9868)[mAs], cc_sum_dec(9868)
+PMU: ricoh61x_displayed_work : dsoc_temp(9800), soc(9800), cc_delta(30)
+PMU: ricoh61x_displayed_work : status(0), rsoc_ready_flag(0)
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 30
+PMU:check_charge_status_2 2nd P-On init_pswr(98), cc(30)
+PMU : set_current_time2register : second is 1644916652, hour is 456921
+PMU FG_RESET : calc_capacity_2 : capacity 9830 init_pswr 98 cc_delta 30
+PMU FG_RESET : ricoh61x_displayed_work : initial  dsoc  is  9800
+PMU : set_current_time2register : second is 1644916652, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(9868)[mAs], cc_sum_dec(9868)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(30)
+PMU:STATUS= 3: IBAT= 146: VSYS= 4336000: VBAT= 4124500: DSOC= 9800: RSOC= 9800: cc_delta=30: rrf= 0
+PMU: ricoh61x_rtc_alarm_enable :0
+random: dbus-uuidgen urandom read with 55 bits of entropy available
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 35
+PMU FG_RESET : calc_capacity_2 : capacity 9835 init_pswr 98 cc_delta 35
+PMU: ricoh61x_displayed_work 1st last_soc_full(0), cc_delta=0
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9835: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9835: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 146: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 0: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 0: 0: IBAT= 146: DSOC= 9800: RSOC= 9835:
+PMU : set_current_time2register : second is 1644916662, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(11320)[mAs], cc_sum_dec(11320)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(35)
+PMU:STATUS= 6: IBAT= 146: VSYS= 4336000: VBAT= 4124500: DSOC= 9800: RSOC= 9800: cc_delta=35: rrf= 0
+ntx_power_key_hook():state=0
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+random: nonblocking pool is initialized
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan country code:"PL" with chplan:0x26
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (138, 10ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 320ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (1, 0ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 420 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x26, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+RTL871X: module init ret=0
+[_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+imx_epdc_v2_fb 228c000.epdc: mxc_epdc_fb_set_pwrdown_delay(),pwrdwn_delay=100,info=8c4f0000,g_fb_data=8c4f0000,info->par=8c4f0000 
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 20ms
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 700ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ�>C�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+RTL871X: survey done event(20) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:2
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:2
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 210ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 740ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:3
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:3
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (146, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(21) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:4
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:4
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 47
+PMU FG_RESET : calc_capacity_2 : capacity 9847 init_pswr 98 cc_delta 47
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9847: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9847: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 142: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 12: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 142: DSOC= 9803: RSOC= 9847:
+PMU : set_current_time2register : second is 1644916691, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(15425)[mAs], cc_sum_dec(15425)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(47)
+PMU:STATUS= 6: IBAT= 142: VSYS= 4308000: VBAT= 4107375: DSOC= 9803: RSOC= 9800: cc_delta=47: rrf= 0
+RTL871X: survey done event(1f) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:5
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:5
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 200ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 730ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇, len=32
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇𞲌
+                       �^�▒�] fw_state=0x00000808
+RTL871X: Set SSID under fw_state=0x00000808
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE
+RTL871X: indicate disassoc
+RTL871X: -871x_drv - drv_close, bup=1
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+RTL871X: module exit start
+RTL871X: ==== rtw_dev_remove sleep 1000 ms ====
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable file: /dev/mmcblk0p3
+Number of LUNs=1
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:6
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 10ms
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+RTL871X: rtw_ndev_uninit(eth0) if1
+RTL871X: ### Clean STA_(1) info ###
+RTL871X: rtw_sdio_if1_deinit wowlan_mode:0
+RTL871X: ===> rtw_dev_unload
+RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at line 581
+RTL871X: CheckIPSStatus(): Read 0x100=0xea 0x86=0x00
+RTL871X: rtw_dev_unload: driver in IPS-FWLPS
+RTL871X: <=== rtw_dev_unload
+RTL871X: +r871xu_dev_remove, hw_init_completed=0
+RTL871X: module exit success
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+mmc1: card 0001 removed
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: module init ret=0
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan country code:"PL" with chplan:0x26
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (139, 10ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 280ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (2, 10ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 390 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x26, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+sy7636_get_temperature():temperature = 29,reg=0x1d
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (136, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ��F�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+RTL871X: survey done event(22) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 840ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: survey done event(1d) band:0 for eth0
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:2
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 20ms
+[_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+ntx_power_key_hook():state=0
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 60
+PMU FG_RESET : calc_capacity_2 : capacity 9860 init_pswr 98 cc_delta 60
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 13: current_soc= 9860: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 13: current_soc= 9860: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 138: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 13: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 138: DSOC= 9806: RSOC= 9860:
+PMU : set_current_time2register : second is 1644916720, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(19440)[mAs], cc_sum_dec(19440)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(60)
+PMU:STATUS= 6: IBAT= 138: VSYS= 4314250: VBAT= 4101600: DSOC= 9806: RSOC= 9800: cc_delta=60: rrf= 0
+RTL871X: -871x_drv - drv_close, bup=1
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:2
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 20ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: module exit start
+RTL871X: ==== rtw_dev_remove sleep 1000 ms ====
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 710ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇, len=32
+�1X�Z%]X�^ԫ��ƛ�T�tA!=܇�;�
+                         �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: rtw_ndev_uninit(eth0) if1
+RTL871X: rtw_pm_set_ips IPS_NONE
+RTL871X: ### Clean STA_(1) info ###
+RTL871X: rtw_sdio_if1_deinit wowlan_mode:0
+RTL871X: ===> rtw_dev_unload
+RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at line 581
+RTL871X: CheckIPSStatus(): Read 0x100=0xff 0x86=0x00
+RTL871X: rtw_dev_unload: driver not in IPS
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_dev_unload
+RTL871X: +r871xu_dev_remove, hw_init_completed=0
+RTL871X: module exit success
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+mmc1: card 0001 removed
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 1
+wifi 3v3 power on
+Wifi On
+_ntx_wifi_bt_power_ctrl() : done 
+sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTL871X: module init start
+RTL871X: rtl8189fs v4.3.24.10_24994.20171103
+RTL871X: build time: May 22 2020 05:26:37
+RTL871X: CHIP TYPE: RTL8188F
+RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: EEPROM type is E-FUSE
+RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+RTL871X: HW EFUSE
+RTL871X: 0x000: 29 81 03 CC 00 00 50 00    00 00 04 CC 0A 0C 00 00
+RTL871X: 0x010: 28 29 29 29 29 29 2B 2B    2B 2B 2B 25 FF FF FF FF
+RTL871X: 0x020: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x030: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x040: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x050: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x060: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x070: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x080: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x090: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x0b0: FF FF FF FF FF FF FF FF    20 1E 1D 00 00 00 00 FF
+RTL871X: 0x0c0: FF 11 00 10 00 FF 00 FF    00 00 FF FF FF FF FF FF
+RTL871X: 0x0d0: 3E 10 01 02 23 FF FF FF    20 04 4C 02 79 F1 21 02
+RTL871X: 0x0e0: 0C 00 22 04 00 08 00 32    FF 21 02 0C 00 22 2A 01
+RTL871X: 0x0f0: 01 00 00 00 00 00 00 00    00 00 00 00 02 00 FF FF
+RTL871X: 0x100: 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00
+RTL871X: 0x110: 00 EB 00 6E 01 00 00 00    00 FF 58 B0 D4 9D A6 8E
+RTL871X: 0x120: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x130: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x140: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x150: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x160: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x170: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x180: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x190: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1a0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1b0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1c0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1d0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1e0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+RTL871X: 0x1f0: FF FF FF FF FF FF FF FF    FF FF FF FF FF FF FF FF
+
+RTL871X: hal_com_config_channel_plan chplan:0x20
+RTL871X: Hal_DetectWoWMode
+RTL871X: kfree flag:1
+RTL871X: bb_gain:2
+RTL871X: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (147, 20ms), REG_MCUFWDL:0x070501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: hal_read_mac_hidden_rpt OK! (2, 10ms), fwdl:1, id:0x19
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: rtw_hal_read_chip_info in 250 ms
+RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13
+RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+RTL871X: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTL871X: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTL871X: default power by rate loaded
+RTL871X: PHY_ConfigRFWithPowerLimitTableParaFile(): No File TXPWR_LMT.txt, Load from HWImg Array!
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+RTL871X: unsupported channel: 114 at 5G
+RTL871X: default power limit loaded
+RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e
+RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e
+RTL871X: oob_irq ZERO!
+RTL871X: module init ret=0
+RTL871X: +871x_drv - drv_open, bup=0
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050105
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 10ms), REG_MCUFWDL:0x000501c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: MAC Address = 58:b0:d4:9d:a6:8e
+RTL871X: -871x_drv - drv_open, bup=1
+RTL871X: start rtl8188fs_xmit_thread(eth0)
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: set bssid:00:00:00:00:00:00
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ, len=32
+RTL871X: set ssid [g�isQ�J�)ͺ����F|�T���vZ.c3�ɚ�>}�
+                                                   �^�▒�] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 72
+PMU FG_RESET : calc_capacity_2 : capacity 9872 init_pswr 98 cc_delta 72
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9872: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 12: current_soc= 9872: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 135: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 12: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 135: DSOC= 9809: RSOC= 9872:
+PMU : set_current_time2register : second is 1644916749, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(23352)[mAs], cc_sum_dec(23352)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(72)
+PMU:STATUS= 6: IBAT= 135: VSYS= 4299500: VBAT= 4096400: DSOC= 9809: RSOC= 9800: cc_delta=72: rrf= 0
+RTL871X: survey done event(1f) band:0 for eth0
+RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+RTL871X: indicate disassoc
+RTL871X: rtw_indicate_scan_done(eth0)
+RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+RTL871X: ==>rtw_ps_processor .fw_state(8)
+RTL871X: ==>ips_enter cnts:1
+RTL871X: nolinked power save enter
+RTL871X: ===> rtw_ips_pwr_down...................
+RTL871X: ====> rtw_ips_dev_unload...
+RTL871X: wpa_set_auth_algs, AUTH_ALG_OPEN_SYSTEM
+RTL871X: _rtw_pwr_wakeup wait ps_processing...
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+RTL871X: SetHwReg8188F: hci_sus_state=3
+RTL871X: SetHwReg8188F: hci_sus_state=0
+RTL871X: <=== rtw_ips_pwr_down..................... in 30ms
+RTL871X: _rtw_pwr_wakeup wait ps_processing done
+RTL871X: _rtw_pwr_wakeup call ips_leave....
+RTL871X: ==>ips_leave cnts:1
+RTL871X: ===>  rtw_ips_pwr_up..............
+RTL871X: ===> ips_netdrv_open.........
+RTL871X: FW does not exist before power on!!
+RTL871X: SetHwReg8188F: hci_sus_state=1
+RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+RTL871X: SetHwReg8188F: hci_sus_state=2
+RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+RTL871X: PowerOnCheck: 0x1B8 test Pass.
+RTL871X: Power on ok!
+RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+RTL871X: rtl8188f_FirmwareDownload fw: FW_NIC, size: 21020
+RTL871X: rtl8188f_FirmwareDownload: fw_ver=4 fw_subver=0000 sig=0x88f1, Month=08, Date=22, Hour=17, Minute=36
+RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTL871X: rtl8188f_FirmwareDownload by IO write!
+RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00050505
+RTL871X: _8051Reset8188: Finish
+RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000505c6
+RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms
+RTL871X:  <=== rtl8188f_FirmwareDownload()
+RTL871X: HalDetectPwrDownMode(): PDN=0
+RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+RTL871X: ADAPTIVITY_VERSION 9.0
+RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:2
+RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060
+RTL871X: <===  rtw_ips_pwr_up.............. in 700ms
+RTL871X: nolinked power save leave
+RTL871X: ==> ips_leave.....LED(0x01028282)...
+RTL871X: rtw_ps_deny_cancel(eth0): [ERROR] Reason 7 had been canceled before!!
+RTL871X: set_mode = IW_MODE_INFRA
+RTL871X: #### hw_var_set_opmode() -4815 iface_type(0) mode = 2 ####
+RTL871X: 
+ wpa_ie(length:22):
+RTL871X: 0x30 0x14 0x01 0x00 0x00 0x0f 0xac 0x02 
+RTL871X: 0x01 0x00 0x00 0x0f 0xac 0x04 0x01 0x00 
+RTL871X: 0x00 0x0f 0xac 0x02 0x00 0x00 0x00 0x00 
+RTL871X: SetHwReg8188F, 5958, RCR= 700060ca
+RTL871X: rtw_wx_set_freq: set to channel 1
+RTL871X: =>rtw_wx_set_essid
+RTL871X: ssid=hotspotttssss, len=13
+RTL871X: set ssid [hotspotttssss] fw_state=0x00000008
+RTL871X: Set SSID under fw_state=0x00000008
+RTL871X: [by_bssid:0][assoc_ssid:hotspotttssss][to_roam:0] new candidate: hotspotttssss(0c:54:15:1c:2c:8a, ch1) rssi:-44
+RTL871X: rtw_select_and_join_from_scanned_queue: candidate: hotspotttssss(0c:54:15:1c:2c:8a, ch:1)
+RTL871X: link to new AP
+RTL871X: [HT] HAL Support STBC = 0x01
+RTL871X: [HT] Declare supporting RX STBC = 1
+RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0
+RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0
+RTL871X: <=rtw_wx_set_essid, ret 0
+RTL871X: set bssid:0c:54:15:1c:2c:8a
+RTL871X: Set BSSID under fw_state=0x00000088
+RTL871X: OnBeacon: beacon keys ready
+RTL871X: link to new AP
+RTL871X: start auth
+RTL871X: issue_auth
+RTL871X: OnAuthClient
+RTL871X: auth success, start assoc
+RTL871X: network.SupportedRates[0]=82
+RTL871X: network.SupportedRates[1]=84
+RTL871X: network.SupportedRates[2]=8B
+RTL871X: network.SupportedRates[3]=96
+RTL871X: network.SupportedRates[4]=0C
+RTL871X: network.SupportedRates[5]=12
+RTL871X: network.SupportedRates[6]=18
+RTL871X: network.SupportedRates[7]=24
+RTL871X: network.SupportedRates[8]=30
+RTL871X: network.SupportedRates[9]=48
+RTL871X: network.SupportedRates[10]=60
+RTL871X: network.SupportedRates[11]=6C
+RTL871X: bssrate_len = 12
+RTL871X: OnAssocRsp
+RTL871X: report_join_res(1)
+RTL871X: rtw_joinbss_update_network
+RTL871X: +rtw_update_ht_cap()
+RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:0c:54:15:1c:2c:8a macid:0
+RTL871X: rtw_joinbss_update_stainfo
+RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff
+RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3
+RTL871X: ### Set STA_(0) info ###
+RTL871X: assoc success
+RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f
+RTL871X: WMM(0): 0, a42b
+RTL871X: WMM(1): 0, a44f
+RTL871X: WMM(2): 0, 5e4322
+RTL871X: WMM(3): 0, 2f3222
+RTL871X: wmm_para_seq(0): 0
+RTL871X: wmm_para_seq(1): 1
+RTL871X: wmm_para_seq(2): 2
+RTL871X: wmm_para_seq(3): 3
+RTL871X: HTOnAssocRsp
+RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitmap:0x000ff005
+RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+         ==> rssi_level:0, rate_bitmap:0x000ff005
+RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005
+RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=0x13
+RTL871X: recv eapol packet
+RTL871X: send eapol packet
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000000
+RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+RTL871X: LocPsPoll: 2
+RTL871X: LocNullData: 3
+RTL871X: LocQosNull: 4
+RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)
+RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(578), TotalPageNum(5)
+RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+RTL871X: phydm_rssi_report mac_id:0, mac:0c:54:15:1c:2c:8a, rssi:60
+RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:True, Firstcont:True
+RTL871X: recv eapol packet
+RTL871X: send eapol packet
+RTL871X:  ~~~~set sta key:unicastkey
+RTL871X:  ~~~~set sta key:groupkey
+RTL871X: ==> rtw_set_key algorithm(2),keyid(2),key_mask(0)
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+RTL871X: set pairwise key camid:4, addr:0c:54:15:1c:2c:8a, kid:0, type:AES
+RTL871X: set group key camid:5, addr:0c:54:15:1c:2c:8a, kid:2, type:TKIP
+RTL871X: SetHwReg8188F, 5951, RCR= 700060ce
+RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitmap:0x000f0000
+RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+         ==> rssi_level:1, rate_bitmap:0x000f0000
+RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000
+RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=0x13
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+RTL871X: do rtw_gw_addr_query()RTL871X: rtw_gw_addr_query Gateway Mac:  0c:54:15:1c:2c:8a
+RTL871X: rtw_gw_addr_query Gateway IP:  10.42.0.1
+RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=1 len=4
+RTL871X: rtw_wx_get_rts, rts_thresh=2347
+RTL871X: rtw_wx_get_frag, frag_len=2346
+RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 58
+RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 56
+RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=56
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 56
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 57
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 60
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 58
+PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 83
+PMU FG_RESET : calc_capacity_2 : capacity 9883 init_pswr 98 cc_delta 83
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 11: current_soc= 9883: rsoc_limit= 0: cc_delta_temp = 0:
+PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 11: current_soc= 9883: rsoc_limit= 0:
+==== DISABLE ibat ====
+PMU: ricoh61x_displayed_work IBAT= 130: ibat_table[85%]= 370: ibat_soc= 8450 ************
+PMU: cc_delta= 11: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 3: 3: IBAT= 130: DSOC= 9812: RSOC= 9883:
+PMU : set_current_time2register : second is 1644916778, hour is 456921
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(27152)[mAs], cc_sum_dec(27152)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(98), cc_delta(83)
+PMU:STATUS= 6: IBAT= 130: VSYS= 4301500: VBAT= 4096400: DSOC= 9812: RSOC= 9800: cc_delta=83: rrf= 0
+RTL871X: CurIGValue=56, EntryMinUndecoratedSmoothedPWDB = 57
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: OnAction_back
+RTL871X: OnAction_back, action=0
+RTL871X: issue_addba_rsp(eth0) ra=0c:54:15:1c:2c:8a status=0, tid=2, size=16
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_TX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x02, WirelessMode:0x0b, rate_bitmap:0x000ff000
+RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+         ==> rssi_level:2, rate_bitmap:0x000ff000
+RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff000
+RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff000 init_rate=0x13
+RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=2 len=4
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+ci_hdrc ci_hdrc.0: EHCI Host Controller
+ci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detecte 
