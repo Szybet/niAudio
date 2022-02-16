@@ -6,6 +6,20 @@ The usb controler is ChipIdea Highspeed Dual Role Controller Driver, the module 
   [*]     ChipIdea device controller
   [*]     ChipIdea host controller
 ```
+`/sys/kernel/debug/usb/devices` says:
+```
+T:  Bus=01 Lev=00 Prnt=00 Port=00 Cnt=00 Dev#=  1 Spd=480  MxCh= 1
+B:  Alloc=  0/800 us ( 0%), #Int=  0, #Iso=  0
+D:  Ver= 2.00 Cls=09(hub  ) Sub=00 Prot=01 MxPS=64 #Cfgs=  1
+P:  Vendor=1d6b ProdID=0002 Rev= 4.01
+S:  Manufacturer=Linux 4.1.15idontknow ehci_hcd
+S:  Product=EHCI Host Controller
+S:  SerialNumber=ci_hdrc.0
+C:* #Ifs= 1 Cfg#= 1 Atr=e0 MxPwr=  0mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=09(hub  ) Sub=00 Prot=00 Driver=hub
+E:  Ad=81(I) Atr=03(Int.) MxPS=   4 Ivl=256ms
+```
+
 Some links:
 - https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
 
@@ -41,3 +55,6 @@ Some links:
 
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
+
+### Update process
+/etc/init.d/upgrade-generic.sh
