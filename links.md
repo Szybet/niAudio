@@ -35,6 +35,8 @@ https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-
 
 #### https://www.mobileread.com/forums/showthread.php?t=340418 - How to switch OTG mode to host on kobo
 
+https://unix.stackexchange.com/questions/60078/find-out-which-modules-are-associated-with-a-usb-device - read usb devices without usbutils
+
 ### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
