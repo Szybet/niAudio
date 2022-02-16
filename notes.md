@@ -10,9 +10,11 @@ Some links:
 - https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
 
 ### ntx_hwconfig
-Some weird linux sys call command
-"ntx_hwconfig is a tool used to read blob values from linux userspace."
-It read / writes data to the sd card
+linux sys call command
+
+from xcsoar issue: "ntx_hwconfig is a tool used to read blob values from linux userspace."
+
+It reads / writes data to the sd card
 ```
 0x80000-0xbffff	1024-1535	hwconfig (read by ntx_hwconfig)
 ```
