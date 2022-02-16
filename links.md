@@ -41,3 +41,5 @@ https://unix.stackexchange.com/questions/60078/find-out-which-modules-are-associ
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
 https://www.mobileread.com
+
+https://github.com/Kobo-InkBox/kernel/issues/1 - maybe will help?
