@@ -22,6 +22,7 @@ E:  Ad=81(I) Atr=03(Int.) MxPS=   4 Ivl=256ms
 
 Some links:
 - https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
+- https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt - some debugging?
 
 ### ntx_hwconfig
 linux sys call command
