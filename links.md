@@ -35,17 +35,6 @@ https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-
 
 #### https://www.mobileread.com/forums/showthread.php?t=340418 - How to switch OTG mode to host on kobo
 
-## Notes
-### Usb controler:
-The usb controler is ChipIdea Highspeed Dual Role Controller Driver, the module is ci_hdrc
-```
-<*>   ChipIdea Highspeed Dual Role Controller
-  [*]     ChipIdea device controller
-  [*]     ChipIdea host controller
-```
-Some links:
-https://elixir.bootlin.com/linux/v4.15/source/Documentation/usb/chipidea.txt
-
 ### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
