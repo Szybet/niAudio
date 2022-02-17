@@ -9,8 +9,10 @@ cp -f zImage update-dir/upgrade/mx6sll-ntx/zImage-E60QM0
 cp -f zImage update-dir/upgrade/mx6sll-ntx/zImage-E70K00
 cp -f zImage update-dir/upgrade/mx6sll-ntx/zImage-E80K00
 
-md5sum update-dir/upgrade/*/* > update-dir/manifest.md5sum
-
+cd update-dir
+md5sum upgrade/*/* > manifest.md5sum
 echo "md5sum file:"
-md5sum update-dir/upgrade/*/*
+cat manifest.md5sum
+cd ..
+
 rm zImage
