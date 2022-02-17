@@ -34,3 +34,12 @@ https://forum.openwrt.org/t/build-error-gcc-10-x-solved-pls-fix-on-repo/68942 - 
 https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-gnueabihf/ - oryginal toolchain wasn't working becouse of "this compiler is known to cause problems", so this is the source for a newer one
 
 #### https://www.mobileread.com/forums/showthread.php?t=340418 - How to switch OTG mode to host on kobo
+
+https://unix.stackexchange.com/questions/60078/find-out-which-modules-are-associated-with-a-usb-device - read usb devices without usbutils
+
+### looking for help:
+https://github.com/kobolabs/Kobo-Reader/issues/116
+
+https://www.mobileread.com
+
+https://github.com/Kobo-InkBox/kernel/issues/1 - maybe will help?
