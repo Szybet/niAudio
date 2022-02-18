@@ -39,6 +39,9 @@ https://unix.stackexchange.com/questions/60078/find-out-which-modules-are-associ
 
 https://github.com/openbmc/openbmc/issues/3274 - bootloader compiler errors, the package on arch linux is dtc
 
+https://stackoverflow.com/questions/53058002/imx6-get-u-boot-to-temporarily-boot-another-u-boot - u-boot without installing, it doesn't work but the beginning works, good for beginning to start with it
+
+
 ### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
