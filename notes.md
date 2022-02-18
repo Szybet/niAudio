@@ -57,11 +57,19 @@ Reset cause: POR
 
 Board: MX6ULL NTX
 ```
-So the script to update u-boot is:
+### So the script to update u-boot is:
 ```
-dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1 skip=1
+dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
 ```
-Important is the "skip=1" step.
+becouse of .imx at the end of the file name:
+```
+if [ `echo $UBOOT | grep -c imx` == 1 ]; then
+		dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
+	else
+		dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1 skip=1
+	fi
+```
+and now it works
 
 Some links:
 - https://www.mobileread.com/forums/showthread.php?t=316455
