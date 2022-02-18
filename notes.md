@@ -57,6 +57,14 @@ Reset cause: POR
 
 Board: MX6ULL NTX
 ```
+
+Some links:
+- https://www.mobileread.com/forums/showthread.php?t=316455
+- https://github.com/pazos/linux-2.6.35.3-kobo/blob/master/arch/arm/mach-mx5/ntx_hwconfig.c
+- **https://github.com/XCSoar/XCSoar/pull/634**
+
+### u-boot
+
 ### So the script to update u-boot is:
 ```
 dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
@@ -70,13 +78,6 @@ if [ `echo $UBOOT | grep -c imx` == 1 ]; then
 	fi
 ```
 and now it works
-
-Some links:
-- https://www.mobileread.com/forums/showthread.php?t=316455
-- https://github.com/pazos/linux-2.6.35.3-kobo/blob/master/arch/arm/mach-mx5/ntx_hwconfig.c
-- **https://github.com/XCSoar/XCSoar/pull/634**
-
-### u-boot
 
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
