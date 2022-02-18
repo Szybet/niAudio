@@ -1,0 +1,186 @@
+U-Boot 2016.03-00069-g0d2ab3e0d5 (Nov 27 2019 - 15:15:57 +0800)
+
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+
+CPU:   Commercial temperature grade (0C to 95C) at 37C
+
+Reset cause: POR
+
+Board: MX6ULL NTX
+
+I2C:   ready
+
+DRAM:  256 MiB
+
+force_idle_bus: sda=0 scl=0 sda.gp=0x15 scl.gp=0x14
+
+MMC:   board_mmc_init() : isd=1 
+
+FSL_SDHC: 0, FSL_SDHC: 1
+
+In:    serial
+
+Out:   serial
+
+Err:   serial
+
+ntx_hw_early_init() 0
+
+ram p=80000000,size=268435456
+
+switch to partitions #0, OK
+
+mmc0 is current device
+
+mmc read 0x8ffffe00 0x3ff 0x1
+
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+
+mmc read 0x8ffffe00 0x400 0x1
+
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+
+RC5T619_watchdog(1,32)
+
+ntx_hw_late_init()
+
+mmc read 0x8ffffc00 0x1 0x1
+
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+
+NTXSN not avalible !
+
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+
+ntx_config_fastboot_layout():10 binaries partition added
+
+ntx_config_fastboot_layout():3 mbr partition added
+
+fuse bank 0 offset 3 is 0x5C31008F
+
+check_and_clean: reg 0, flag_set 0
+
+Fastboot: Normal
+
+Hit any key to stop autoboot:  1  0 
+
+switch to partitions #0, OK
+
+mmc0 is current device
+
+mmc read 0x80800000 0x800 0x2c00
+
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+
+Booting from mmc ...
+
+mmc read 0x83000000 0x505 0x1
+
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+
+dtb size = 41589@83000000
+
+mmc read 0x83000000 0x506 0x57
+
+
+MMC read: dev # 0, block # 1286, count 87 ... 87 blocks read: OK
+
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+
+ESDin=0,UPGKey=0,PWRKey=1,USBin=0x0,BootESD=0,MenuKey=0
+
+mmc read 0x8ffffc00 0x37ff 0x1
+
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+mmc read 0x8ff71a00 0x3800 0x472
+
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+
+mmc read 0x8ff71800 0x405 0x1
+
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+
+[WARNING] Binaries load sequence should Lo->Hi !
+
+mmc read 0x8ff71400 0x406 0x3
+
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+
+Kernel RAM visiable size=255M->255M
+
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+
+hwcfg rootfstype : 2
+
+hwcfg partition type : 2,bootmode=0
+
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+
+Kernel image @ 0x80800000 [ 0x000000 - 0x49e360 ]
+
+## Flattened Device Tree blob at 83000000
+
+   Booting using the fdt blob at 0x83000000
+
+   Using Device Tree in place at 83000000, end 8300d274
+
+
+Starting kernel ...
+
+
+/cpus/cpu@0 missing clock-frequency property
+sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 800217f0 ntx_machine_poweroff
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+==== calc_soc_by_voltageMethod E60U22 ====
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000227 seconds, 2.2MB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+fsck.fat 4.1+git (2017-01-24)
+0x41: Dirty bit is set. Fs was not properly unmounted and some data may be corrupt.
+ Automatically removing dirty bit.
+/dev/mmcblk0p3: 1738 files, 186502/1795659 clusters
+fsck.fat 4.1+git (2017-01-24)
+/dev/mmcblk0p3: 1738 files, 186502/1795659 clusters
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+
+
+kobo login: /usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+sh: you need to specify whom to kill
+==== calc_soc_by_voltageMethod E60U22 ====
+==== DISABLE ibat ====
