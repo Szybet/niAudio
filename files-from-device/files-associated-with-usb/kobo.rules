@@ -1,0 +1,6 @@
+KERNEL=="mmcblk[1-9]p[1-9]", RUN+="/usr/local/Kobo/udev/sd"
+KERNEL=="usb_host", RUN+="/usr/local/Kobo/udev/plug"
+KERNEL=="fsl-usb2-udc", ACTION=="offline", RUN+="/usr/local/Kobo/udev/plug"
+KERNEL=="usb_plug", RUN+="/usr/local/Kobo/udev/ac"
+KERNEL=="ci_hdrc.0", ACTION=="offline" RUN+="/usr/local/Kobo/udev/plug"
+KERNEL=="5100000.udc-controller", ACTION=="offline" RUN+="/usr/local/Kobo/udev/plug"
