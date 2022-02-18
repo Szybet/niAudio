@@ -37,6 +37,8 @@ https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-
 
 https://unix.stackexchange.com/questions/60078/find-out-which-modules-are-associated-with-a-usb-device - read usb devices without usbutils
 
+https://github.com/openbmc/openbmc/issues/3274 - bootloader compiler errors, the package on arch linux is dtc
+
 ### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
