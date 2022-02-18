@@ -47,6 +47,21 @@ The CPU model on the kobo is:
 ```
 27] CPU='mx6ull' [ mx35|m166e|mx50|x86|mx6|mx6sl|it8951|i386|mx7d|mx6ull|mx6sll|mx6dl|rk3368|rk3288|b300 ]
 ```
+And u-boot at boot outputs:
+```
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+
+CPU:   Commercial temperature grade (0C to 95C) at 37C
+
+Reset cause: POR
+
+Board: MX6ULL NTX
+```
+So the script to update u-boot is:
+```
+dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1 skip=1
+```
+Important is the "skip=1" step.
 
 Some links:
 - https://www.mobileread.com/forums/showthread.php?t=316455
