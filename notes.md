@@ -65,7 +65,7 @@ Some links:
 
 ### u-boot
 
-### So the script to update u-boot is:
+#### So the script to update u-boot is:
 ```
 dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
 ```
@@ -78,6 +78,8 @@ if [ `echo $UBOOT | grep -c imx` == 1 ]; then
 	fi
 ```
 and now it works
+
+By looking ot the headers at .mix and .bin files, the .mix works, and is used on the kobo nia
 
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
