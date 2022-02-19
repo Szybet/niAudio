@@ -29,7 +29,7 @@ https://github.com/Kobo-InkBox/kernel - custom kernels for kobo, seems interesti
 https://pgaskin.net/KoboStuff/kobofirmware.html - kobo firmware copies
 
 ## Fixes:
-https://forum.openwrt.org/t/build-error-gcc-10-x-solved-pls-fix-on-repo/68942 - the oryginal kernel wasn't compiling, this was needed
+https://forum.openwrt.org/t/build-error-gcc-10-x-solved-pls-fix-on-repo/68942 - the oryginal kernel wasn't compiling, this was needed. this toolchain also works: https://github.com/pgaskin/NickelTC, download it is here under nickel name: https://github.com/Kobo-InkBox/kernel/tree/master/toolchain/arm-nickel-linux-gnueabihf
 
 https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/arm-linux-gnueabihf/ - oryginal toolchain wasn't working becouse of "this compiler is known to cause problems", so this is the source for a newer one
 
