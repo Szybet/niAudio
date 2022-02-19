@@ -57,11 +57,6 @@ Reset cause: POR
 
 Board: MX6ULL NTX
 ```
-So the script to update u-boot is:
-```
-dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1 skip=1
-```
-Important is the "skip=1" step.
 
 Some links:
 - https://www.mobileread.com/forums/showthread.php?t=316455
@@ -69,6 +64,22 @@ Some links:
 - **https://github.com/XCSoar/XCSoar/pull/634**
 
 ### u-boot
+
+#### So the script to update u-boot is:
+```
+dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
+```
+becouse of .imx at the end of the file name:
+```
+if [ `echo $UBOOT | grep -c imx` == 1 ]; then
+		dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1
+	else
+		dd if=$UBOOT of=/dev/$DEVICE bs=1K seek=1 skip=1
+	fi
+```
+and now it works
+
+By looking ot the headers at .mix and .bin files, the .mix works, and is used on the kobo nia
 
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
