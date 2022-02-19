@@ -81,6 +81,10 @@ and now it works
 
 By looking ot the headers at .mix and .bin files, the .mix works, and is used on the kobo nia
 
+to get the config for the board: `make -j 6 CROSS_COMPILE=arm-linux-gnueabihf- ARCH=arm mx6ull_ntx_lpddr2_256m_defconfig`
+
+To make ./tools/buildman/buildman to work its needed to change 2 files to python2
+
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
 - https://www.mail-archive.com/u-boot@lists.denx.de/msg84548.html - u-boot keyboard not found?
