@@ -83,6 +83,7 @@ By looking ot the headers at .mix and .bin files, the .mix works, and is used on
 
 Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
+- https://www.mail-archive.com/u-boot@lists.denx.de/msg84548.html - u-boot keyboard not found?
 
 ### Update process
 /etc/init.d/upgrade-generic.sh
