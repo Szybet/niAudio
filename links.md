@@ -45,6 +45,7 @@ https://stackoverflow.com/questions/53058002/imx6-get-u-boot-to-temporarily-boot
 ### looking for help:
 https://github.com/kobolabs/Kobo-Reader/issues/116
 
-https://www.mobileread.com
+https://www.mobileread.com/forums/showthread.php?t=345181
+https://www.mobileread.com/forums/showthread.php?t=340418
 
 https://github.com/Kobo-InkBox/kernel/issues/1 - maybe will help?
