@@ -90,5 +90,12 @@ Some links:
 - https://elinux.org/U-boot_environment_variables_in_linux
 - https://www.mail-archive.com/u-boot@lists.denx.de/msg84548.html - u-boot keyboard not found?
 
-### Update process
+### Update process with kobo firmware
 /etc/init.d/upgrade-generic.sh
+
+# Sound
+### It works only when its charging.
+explanation from andi1, from inkbox discord server
+```
+there might be protection diodes letting stuff go to vbus, probably higher voltages at the data lines than on vbus might be a problem
+```
