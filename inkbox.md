@@ -48,6 +48,7 @@ configuring with menuconfig does that it will don't compile, so propably leave i
 change kernel sector to 81920 and load size to 18432  in ntx_comm.c
 ```
 
+
 2. From inkbox repo
 
 clone the repo: https://github.com/Kobo-InkBox/kernel
@@ -102,7 +103,7 @@ Get the source: https://github.com/kobolabs/Kobo-Reader/blob/master/hw/imx6ull-n
 
 Grab the config from `arch/arm/configs/imx_v7_kobo_defconfig` and copy it to the main directory as `.config`
 
- & Create a symlink to your cloned repo from `/home/build/inkbox/kernel/`. The script getting busybox is static
+& Create a symlink to your cloned repo from `/home/build/inkbox/kernel/`. The script getting busybox is static
 
 * whot to modify to make it work for the nia? this is the most important step, this will show whot inkbox needs and will be helpfull for porting to other devices. the things i know:
 ```
@@ -112,7 +113,7 @@ console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_s
 Args passed to the kernel at boot
 ```
 
-\*& Change DEFAULT_LOAD_KERNEL_SZ in `bootloader/mx6ull-n306/board/freescale/mx6ull_ntx/ntx_comm.c` to 20480 - this is propably fixes now
+Change DEFAULT_LOAD_KERNEL_SZ in `bootloader/mx6ull-n306/board/freescale/mx6ull_ntx/ntx_comm.c` to 20480 \*& this is propably fixed now?
 
 ***
 Write the kernel:
