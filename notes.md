@@ -79,6 +79,12 @@ if [ `echo $UBOOT | grep -c imx` == 1 ]; then
 ```
 and now it works
 
+explanation by andi1:
+```
+generally abut uboot and skip: if the uboot.imx binary starts with  zeros, you need the skip
+if not, you do not need it
+```
+
 By looking ot the headers at .mix and .bin files, the .mix works, and is used on the kobo nia
 
 to get the config for the board: `make -j 6 CROSS_COMPILE=arm-linux-gnueabihf- ARCH=arm mx6ull_ntx_lpddr2_256m_defconfig`
