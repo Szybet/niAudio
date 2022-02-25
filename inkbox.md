@@ -1,5 +1,6 @@
 # Guide to install inkbox on kobo nia manually step by step
 Becouse tinkering with open source software is easier
+
 this guide could also help you port inkbox to another device, it will for sure if tux-linux explains some steps more, tagged with `*`. If not, i will try to look for diffrences from oryginal and modified inkbox sources, but that will be painfull...
 - the line (`***`) after points 2 etc. mean that they connect all the points, the same steps for both of them
 - the & mark says it will propably change in the future
