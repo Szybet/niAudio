@@ -1,4 +1,4 @@
-## Notes
+## Notes for kobo nia, code name n306
 ### Usb controler:
 The usb controler is ChipIdea Highspeed Dual Role Controller Driver, the module is ci_hdrc
 ```
