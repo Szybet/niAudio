@@ -43,7 +43,7 @@ make -j 6 CROSS_COMPILE=arm-linux-gnueabihf- ARCH=arm mx6ull_ntx_lpddr2_256m_def
 This will generate the config file.
 configuring with menuconfig does that it will don't compile, so propably leave it as it is.
 
-* Whot to modify to make it work with inkbox? propably only from where to boot the kernel:
+\* What to modify to make it work with inkbox? propably only from where to boot the kernel:
 ```
 change kernel sector to 81920 and load size to 18432  in ntx_comm.c
 ```
@@ -85,7 +85,7 @@ Device      Boot   Start     End Sectors  Size Id Type
 ```
 The last partition can be extended to the end of the sd card
 
-format the partitions using ```mkfs.ext4 -O "^metadata_csum" /dev/partition```. * can we format them now, all at once or does it need to be after specific steps?
+format the partitions using ```mkfs.ext4 -O "^metadata_csum" /dev/partition```. \* can we format them now, all at once or does it need to be after specific steps?
 
 # Kernel
 1. The way using inkbox repository
@@ -105,7 +105,7 @@ Grab the config from `arch/arm/configs/imx_v7_kobo_defconfig` and copy it to the
 
 & Create a symlink to your cloned repo from `/home/build/inkbox/kernel/`. The script getting busybox is static
 
-* whot to modify to make it work for the nia? this is the most important step, this will show whot inkbox needs and will be helpfull for porting to other devices. the things i know:
+\* what to modify to make it work for the nia? this is the most important step, this will show what inkbox needs and will be helpfull for porting to other devices. the things i know:
 ```
 oopback device support, FUSE, squashFS and other things
 
