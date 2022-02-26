@@ -68,7 +68,7 @@ Connect the eReader to a PC with the USB cable and execute `ums 0 mmc 0` in U-Bo
 
 Launch `sudo fdisk /dev/sdcard` (of course, replace `sdcard` with your SD card's device node), clear the partition table with `o`, look up the partition with `p`, and `n` to add a partition.
 
-**Important, set the `Start` and `End` sectors exactly like said below. InkBox OS will probably not boot otherwise.**
+**Important: set the `Start` and `End` sectors exactly like said below. InkBox OS will probably not boot otherwise.**
 ```
 Device      Boot   Start     End Sectors  Size Id Type
 /dev/nbd0p1        49152   79871   30720   15M 83 Linux
@@ -95,7 +95,7 @@ First, follow the steps in the "Bootloader" part to set up InkBox's "kernel" rep
 
 Change directory into `/home/build/inkbox/kernel`, then run:
 ```
-env GITDIR="${PWD}"TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
+env GITDIR="${PWD}" TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
 ```
 
 **2. From source**
