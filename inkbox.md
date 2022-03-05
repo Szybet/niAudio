@@ -31,6 +31,7 @@ Adjust the parameters of make and the `CROSS_COMPILE` environment variable to yo
 
 ## Compiling the bootloader
 1. From inkbox repo
+
 Clone InkBox `kernel` repository and change directory into the Nia bootloader sources (or make a symlink of this location):
 ```
 sudo mkdir -p /home/build/inkbox
@@ -40,6 +41,7 @@ cd kernel/bootloader/mx6ull-n306
 ```
 
 2. From source
+
 Get the sources: https://github.com/kobolabs/Kobo-Reader/blob/master/hw/imx6ull-nia/bootloader.tar.bz2
 
 \* whot did you changed to make it work? how to do this, which file to edit?
