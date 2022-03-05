@@ -3,6 +3,10 @@
 
 This guide could also help you port InkBox to another device.
 
+### *note for tux-linux, look at "\*" points*
+
+The "From inkbox repo" points are easier, and will work for 100%. "From source" is dedicated to understand the automated process, to know whot changes are made to make inkbox working
+
 ### For errors, check [links.md](https://github.com/Szybet/kobo-nia-audio/blob/main/links.md) and the Fixes section
 
 Here is the copy of the discord chat as of 25.02.2022
@@ -26,13 +30,25 @@ Simply unpack it to `~/.local/`. Remember to delete the previous toolchain there
 Adjust the parameters of make and the `CROSS_COMPILE` environment variable to your needs.
 
 ## Compiling the bootloader
-Clone InkBox `kernel` repository and change directory into the Nia bootloader sources:
+1. From inkbox repo
+Clone InkBox `kernel` repository and change directory into the Nia bootloader sources (or make a symlink of this location):
 ```
 sudo mkdir -p /home/build/inkbox
 sudo chown -R "${USER}:${USER}" /home/build
 cd /home/build/inkbox && git clone https://github.com/Kobo-InkBox/kernel
 cd kernel/bootloader/mx6ull-n306
 ```
+
+2. From source
+Get the sources: https://github.com/kobolabs/Kobo-Reader/blob/master/hw/imx6ull-nia/bootloader.tar.bz2
+
+\* whot did you changed to make it work? how to do this, which file to edit?
+for example:
+```
+change kernel sector to 81920 and load size to 18432  in ntx_comm.c
+```
+
+***
 
 To get the config, for Kobo Nia there are 2:
 ```
@@ -91,7 +107,9 @@ printf "rooted\n" | dd of=/dev/sdcard bs=512 seek=79872
 ## Kernel
 First, follow the steps in the "Bootloader" part to set up InkBox's "kernel" repository.
 
-**1. With the `build_kernel.sh` script in InkBox repository**
+**1. From inkbox repo**
+
+**With the `build_kernel.sh` script in InkBox repository:**
 
 Change directory into `/home/build/inkbox/kernel`, then run:
 ```
@@ -106,12 +124,18 @@ Grab the config from `arch/arm/configs/imx_v7_kobo_defconfig` and copy it to the
 
 Create a symlink to your cloned repo from `/home/build/inkbox/kernel/`. The script getting busybox is static.
 
+\* I have writed this sentence, and now I don't know whot a talked about. Could you clarify?
+
 Enable Loopback device support, FUSE and SquashFS with XZ support.
+
+\* whot are the specific "names" of the changes? so it would be easy to paste the name in menuconfig, using "/" and then enable this feature
+
+Set the `CONFIG_CMDLINE_FORCE` option to `y` and change the `CONFIG_CMDLINE` option with the contents below.
 
 ```
 console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
 ```
-Set the `CONFIG_CMDLINE_FORCE` option to `y` and change the `CONFIG_CMDLINE` option with the contents above.
+\* where to set it, in which file?
 
 ***
 Write the kernel to the SD card:
