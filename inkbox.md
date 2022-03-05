@@ -107,9 +107,9 @@ printf "rooted\n" | dd of=/dev/sdcard bs=512 seek=79872
 ```
 
 ## Kernel
-First, follow the steps in the "Bootloader" part to set up InkBox's "kernel" repository.
-
 **1. From inkbox repo**
+
+First, follow the steps in the "Bootloader" part to set up InkBox's "kernel" repository.
 
 **With the `build_kernel.sh` script in InkBox repository:**
 
