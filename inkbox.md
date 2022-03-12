@@ -144,3 +144,50 @@ Write the kernel to the SD card:
 ```
 dd if=zImage-root of=/dev/sdcard bs=512 seek=81920
 ```
+
+## If now the kernel boots, and the screen flashes, its propably half the way to port inkbox to it
+
+## rootfs
+
+get the rootfs, but clone it as root ( to avoid permissions problem later on the kobo ):
+```
+sudo git clone https://github.com/Kobo-InkBox/rootfs
+```
+
+Enter the directory, execute as **root**:
+```
+env GITDIR="${PWD}" ./release.sh
+```
+
+create your keys:
+```
+openssl genrsa -out private.pem 2048
+openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+```
+
+\* tux-linux, explain here the key part, becouse propably creating your own is not a good idea? also the gui bundle needs to be verified with the same key so idk
+
+sign the rootfs:
+```
+openssl dgst -sha256 -sign private.pem -out rootfs.squashfs.dgst rootfs.squashfs
+```
+
+Now copy the `rootfs.squashfs.dgst` and  `rootfs.squashfs` to the third partition ( 128M one )
+
+clone the repo: https://github.com/Kobo-InkBox/emu
+
+\* is it needed to clone it as root too?
+
+Execute those commands, where [location-of-p4] is the biggest partition ( where userdata X11/KoBox images as well as GUI bundle and other things are stored )
+```
+cat sd/user.sqsh.* > sd/user.sqsh
+sudo unsquashfs -f -d [location-of-p4]/ sd/user.sqsh
+```
+
+get the gui bundle:
+```
+wget 23.163.0.39/bundles/private/update-n306.isa
+```
+and copy it to partition 4, with name `update.isa` to the folder `update`
+
+## \* Is that all?
