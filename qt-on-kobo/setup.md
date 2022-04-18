@@ -8,6 +8,7 @@ As for 18.04.2022 those are working download links:
 - QT 5.15.2: https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
 - OpenSSL 1.1.1: https://www.openssl.org/source/openssl-1.1.1n.tar.gz
 - koxtoolchain: https://github.com/koreader/koxtoolchain
+- qt5-kobo-platform-plugin: https://github.com/Rain92/qt5-kobo-platform-plugin
 
 ## 2. koxtoolchain
 First, install dependiences specified in the readme, then just launch `./gen-tc.sh kobo` in the repository. it should work without problem
@@ -139,3 +140,20 @@ Make sure that `qmake` cames from `qt-linux-5.15.2-kobo` ( `whereis` )
 
 ### Prepare a kit for Qt Creator
 
+## Install Qt to kobo
+first, copy `libstdc++.so.6.0.29` ( its called like that for me ) from `x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/` and put it to `qt-bin/qt-linux-5.15.2-kobo/lib/` and rename it to `libstdc++.so.6`.
+
+Now execute:
+```
+export PATH="${PATH}:${HOME}/qt-bin/qt-linux-5.15.2-kobo/bin"
+source koxtoolchain/dir/path/refs/x-compile.sh kobo env
+```
+enter `qt5-kobo-platform-plugin` repository and execute the qmake from compiled `qt-linux-5.15.2-kobo`:
+```
+~/qt-bin/qt-linux-5.15.2-kobo/bin/qmake .
+```
+Revert the repository to March 6 2021, becouse inkbox uses it:
+```
+git reset --hard 19db015bfca7ccac70574ac88e5bff4b42c90ab3
+```
+now simply `make`. Copy the compiled `libkobo.so` to `qt-bin/qt-linux-5.15.2-kobo/plugins/platforms/`
