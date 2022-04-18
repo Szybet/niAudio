@@ -157,3 +157,15 @@ Revert the repository to March 6 2021, becouse inkbox uses it:
 git reset --hard 19db015bfca7ccac70574ac88e5bff4b42c90ab3
 ```
 now simply `make`. Copy the compiled `libkobo.so` to `qt-bin/qt-linux-5.15.2-kobo/plugins/platforms/`
+
+Now copy `qt-bin` to the kobo, into `/kobo/` folder ( sshfs doesn't work ):
+```
+ssh root@10.42.0.28 'ifsctl mnt rootfs rw'
+scp -r qt-bin/qt-linux-5.15.2-kobo root@10.42.0.28:/kobo
+ssh root@10.42.0.28 'sync'
+```
+## Execute app on kobo
+```
+chroot /kobo
+env LD_LIBRARY_PATH=qt-linux-5.15.2-kobo/lib QT_QPA_PLATFORM=kobo ./app
+```
