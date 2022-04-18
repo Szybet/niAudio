@@ -3,7 +3,7 @@
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
 
-## 1. Download needed files
+## 1. Download needed things
 As for 18.04.2022 those are working download links:
 - QT 5.15.2: https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
 - OpenSSL 1.1.1: https://www.openssl.org/source/openssl-1.1.1n.tar.gz
