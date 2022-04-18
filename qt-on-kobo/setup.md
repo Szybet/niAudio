@@ -90,14 +90,13 @@ find . -type f -print0 | xargs -0 -n 1 -P 8 dos2unix
 ### Qt Fixes
 Those are changes to qt source that were needed **for me** to compile it:
 - Add `#include <limits>` to `qtbase/src/corelib/global/qfloat16.h`
-- Add:
+- Add this to `qtbase/src/corelib/text/qbytearraymatcher.h`:
 ```
  #include <stdexcept>
  #include <limits>
 ```
-to `qtbase/src/corelib/text/qbytearraymatcher.h`
 - Change `#include <limits.h>` to `#include <limits>` in `qtdeclarative/src/3rdparty/masm/yarr/Yarr.h`
-- 
+- Add `#include <limits>` to `qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h`
 
 Now execute:
 ```shell
@@ -126,3 +125,17 @@ make -j$(nproc)
 make install
 ```
 *Note: `./configure` is changed by me to enable sql support*
+
+## Compile qt app for kobo
+### In terminal:
+```
+source koxtoolchain/dir/path/refs/x-compile.sh kobo env
+export PATH="${PATH}:${HOME}/qt-bin/qt-linux-5.15.2-kobo/bin"
+cd /inkbox/repo
+qmake .
+make
+```
+Make sure that `qmake` cames from `qt-linux-5.15.2-kobo` ( `whereis` )
+
+### Prepare a kit for Qt Creator
+
