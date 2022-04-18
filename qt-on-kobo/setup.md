@@ -166,6 +166,9 @@ ssh root@10.42.0.28 'sync'
 ```
 ## Execute app on kobo
 ```
+killall -9 inkbox.sh
+killall -9 inkbox
+killall -9 inkbox-bin
 chroot /kobo
 env LD_LIBRARY_PATH=qt-linux-5.15.2-kobo/lib QT_QPA_PLATFORM=kobo ./app
 ```
