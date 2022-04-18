@@ -1,4 +1,4 @@
-# How to setup QT for inkbox, from ground up. Fixes and better tutorial
+# How to setup Qt for inkbox, from ground up. Fixes and better tutorial
 
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
@@ -79,7 +79,25 @@ and to `qplatformdefs.h`:
 ```
 #include "../linux-g++/qplatformdefs.h"
 ```
-
+Make sure those files are there, and the **names are correct**:
+```
+ls qtbase/mkspecs/linux-kobo-gnueabihf-g++
+```
+Some Qt sources are meant for windows, so if any error says something with `\M` then execute:
+```
+find . -type f -print0 | xargs -0 -n 1 -P 8 dos2unix
+```
+### Qt Fixes
+Those are changes to qt source that were needed **for me** to compile it:
+- Add `#include <limits>` to `qtbase/src/corelib/global/qfloat16.h`
+- Add:
+```
+ #include <stdexcept>
+ #include <limits>
+```
+to `qtbase/src/corelib/text/qbytearraymatcher.h`
+- Change `#include <limits.h>` to `#include <limits>` in `qtdeclarative/src/3rdparty/masm/yarr/Yarr.h`
+- 
 
 Now execute:
 ```shell
@@ -107,3 +125,4 @@ export SYSROOT=/home/${USER}/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnu
 make -j$(nproc)
 make install
 ```
+*Note: `./configure` is changed by me to enable sql support*
