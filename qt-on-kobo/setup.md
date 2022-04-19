@@ -139,8 +139,40 @@ make
 Make sure that `qmake` cames from `qt-linux-5.15.2-kobo` ( `whereis` )
 
 ### Prepare a kit for Qt Creator
+If something doesn't work, use the commnand line
 
-## Install Qt to kobo
+First, create a new generic linux device, something like this:
+![image](https://user-images.githubusercontent.com/53944559/163981178-38e1612d-d08f-4cd7-b9fd-7bcd48759426.png)
+
+Now add the compiled Qt version:
+![image](https://user-images.githubusercontent.com/53944559/163981497-b9cb7d75-9900-457e-918b-9a2c3a7dc336.png)
+
+Add the compilers ( C is for gcc, C++ is for g++. Ignore the error "invalid toolchain"
+![image](https://user-images.githubusercontent.com/53944559/163982106-b56fa194-1994-4e3c-8f81-569debf719bc.png)
+![image](https://user-images.githubusercontent.com/53944559/163982150-9aabe736-8aed-4e62-80e5-db0c2177d090.png)
+
+Now set them in the kit, and add something like this to Envirovment: `/opt/inkbox-qt-compile/x-tools/arm-kobo-linux-gnueabihf/bin/`
+
+The Final result should look like this:
+
+![image](https://user-images.githubusercontent.com/53944559/163984692-6d558e78-3aea-4e8e-819c-b8d871d31874.png)
+
+To enable it for a project, open the project, click the tab on the left and click Kobo, in the section `Build & Run`.
+
+To make the run button work, do something like this:
+add a file `/kobo/launch_app.sh` with adjusted to your needs parameters:
+```
+#!/bin/bash
+cd /
+chroot /kobo /bin/ash -c "env LD_LIBRARY_PATH=qt-linux-5.15.2-kobo/lib QT_QPA_PLATFORM=kobo ./sanki"
+```
+
+And do something like this:
+![image](https://user-images.githubusercontent.com/53944559/163995358-d29a8d69-644d-4e76-af76-d48e06031321.png)
+
+Now it should work
+
+## Install your custom Qt to kobo
 first, copy `libstdc++.so.6.0.29` ( its called like that for me ) from `x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/` and put it to `qt-bin/qt-linux-5.15.2-kobo/lib/` and rename it to `libstdc++.so.6`.
 
 Now execute:
@@ -166,9 +198,7 @@ ssh root@10.42.0.28 'sync'
 ```
 ## Execute app on kobo
 ```
-killall -9 inkbox.sh
-killall -9 inkbox
-killall -9 inkbox-bin
+killall -9 inkbox.sh inkbox inkbox-bin; sleep 1; killall -9 inkbox.sh inkbox inkbox-bin
 chroot /kobo
 env LD_LIBRARY_PATH=qt-linux-5.15.2-kobo/lib QT_QPA_PLATFORM=kobo ./app
 ```
