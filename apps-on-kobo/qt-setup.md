@@ -151,7 +151,7 @@ Add the compilers ( C is for gcc, C++ is for g++. Ignore the error "invalid tool
 ![image](https://user-images.githubusercontent.com/53944559/163982106-b56fa194-1994-4e3c-8f81-569debf719bc.png)
 ![image](https://user-images.githubusercontent.com/53944559/163982150-9aabe736-8aed-4e62-80e5-db0c2177d090.png)
 
-Now set them in the kit, and add something like this to Envirovment: `/opt/inkbox-qt-compile/x-tools/arm-kobo-linux-gnueabihf/bin/`
+Now set them in the kit, and add something like this to Envirovment: `PATH="${PATH}:/opt/inkbox-qt-compile/x-tools/arm-kobo-linux-gnueabihf/bin/`
 
 The Final result should look like this:
 
