@@ -79,3 +79,6 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# Build dir for Qt, if it works
+Build
