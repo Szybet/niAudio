@@ -51,4 +51,10 @@ sed -i '42i #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h
 sed -i '46i #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 sed -i '/#include <limits.h>/c\#include <limits>' qtdeclarative/src/3rdparty/masm/yarr/Yarr.h
 
+cd ..
+export PATH=$PATH:${PWD}/x-tools/arm-kobo-linux-gnueabihf/bin/
+export QTDIR=qt-linux-5.15.2-kobo
+export SYSROOT=${PWD}/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot
+cd qt-everywhere-src-5.15.2
+./configure --recheck-all -opensource -confirm-license -release -verbose  -prefix /mnt/onboard/.adds/${QTDIR}  -extprefix /home/${USER}/qt-bin/${QTDIR}  -xplatform linux-kobo-gnueabihf-g++  -sysroot ${SYSROOT}  -openssl-linked OPENSSL_PREFIX="${SYSROOT}/usr"  -qt-libjpeg -qt-zlib -qt-libpng -qt-freetype -qt-harfbuzz -qt-pcre -sql-sqlite -linuxfb  -no-sse2 -no-xcb -no-xcb-xlib -no-tslib -no-icu -no-iconv -no-dbus  -nomake tests -nomake examples -no-compile-examples -no-opengl  -skip qtx11extras -skip qtwayland -skip qtwinextras -skip qtmacextras -skip qtandroidextras  -skip qttools -skip qtdoc -skip qtlocation -skip qtremoteobjects -skip qtconnectivity -skip qtgamepad  -skip qt3d -skip qtquick3d -skip qtquickcontrols -skip qtsensors -skip qtspeech -skip qtdatavis3d  -skip qtpurchasing -skip qtserialbus -skip qtserialport -skip multimedia -skip qtquicktimeline -skip qtlottie  -skip activeqt -skip qtscript -skip qtxmlpatterns -skip qtscxml -skip qtvirtualkeyboard  -skip qtwebengine -skip qtwebview -skip qtwebglplugin  -no-cups -no-pch -no-libproxy  -no-feature-printdialog -no-feature-printer -no-feature-printpreviewdialog -no-feature-printpreviewwidget
 
