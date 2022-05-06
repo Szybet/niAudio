@@ -49,5 +49,6 @@ sed -i '45i #include <limits>' qtbase/src/corelib/global/qfloat16.h
 sed -i '42i #include <stdexcept>' qtbase/src/corelib/text/qbytearraymatcher.h
 sed -i '42i #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h
 sed -i '46i #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
+sed -i '/#include <limits.h>/c\#include <limits>' qtdeclarative/src/3rdparty/masm/yarr/Yarr.h
 
 
