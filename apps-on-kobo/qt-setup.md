@@ -3,6 +3,9 @@
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
 
+## 0.5 Container
+Its best to do this in a container, becouse things car break and have problems. use distrobox. There is a script in the repo folder to automate this.
+
 ## 1. Download needed things
 As for 18.04.2022 those are working download links:
 - QT 5.15.2: https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
