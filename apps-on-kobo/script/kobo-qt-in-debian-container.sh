@@ -35,6 +35,19 @@ wget https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15
 tar -xf qt-everywhere-src-5.15.2.tar.xz
 sync
 cd qt-everywhere-src-5.15.2
-
+mkdir qtbase/mkspecs/linux-kobo-gnueabihf-g++
+cd qtbase/mkspecs/linux-kobo-gnueabihf-g++
+curl -O https://raw.githubusercontent.com/Szybet/kobo-nia-audio/main/apps-on-kobo/script/qmake.conf
+curl -O https://raw.githubusercontent.com/Szybet/kobo-nia-audio/main/apps-on-kobo/script/qplatformdefs.h
+sync
+cd ../../../
+ls qtbase/mkspecs/linux-kobo-gnueabihf-g++
+sudo apt-get install dos2unix
+find . -type f -print0 | xargs -0 -n 1 -P 8 dos2unix
+echo "now are qt fixes, i hope they will work"
+sed -i '45i #include <limits>' qtbase/src/corelib/global/qfloat16.h
+sed -i '42i #include <stdexcept>' qtbase/src/corelib/text/qbytearraymatcher.h
+sed -i '42i #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h
+sed -i '46i #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 
 
