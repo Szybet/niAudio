@@ -181,6 +181,7 @@ Now it should work
 
 ## Install your custom Qt to kobo
 first, copy `libstdc++.so.6.0.29` ( its called like that for me ) from `x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/` and put it to `qt-bin/qt-linux-5.15.2-kobo/lib/` and rename it to `libstdc++.so.6`.
+Also copy from `openssl-1.1.1n`: `libcrypto.so.1.1`,`libssl.so.1.1` and also put it to `qt-bin/qt-linux-5.15.2-kobo/lib/` 
 
 Now execute:
 ```
