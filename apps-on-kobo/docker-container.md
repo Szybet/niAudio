@@ -10,7 +10,7 @@ docker pull nvidia/cudagl:11.3.0-devel-ubuntu20.04
 ### run the container
 Normal:
 ```
-docker run --privileged --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --net=host --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it --entrypoint /bin/bash nvidia/cudagl:11.3.0-devel-ubuntu20.04
+docker run --privileged --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --net=host --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it --entrypoint /bin/bash debian
 ```
 Nvidia:
 ```
