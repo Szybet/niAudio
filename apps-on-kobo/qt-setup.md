@@ -1,4 +1,4 @@
-# How to setup Qt for inkbox, from ground up. Fixes and better tutorial
+# How to setup Qt for inkbox, from ground up. Fixes and tutorial
 
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
