@@ -3,12 +3,8 @@
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
 
-## 0.5 Container
-Its best to do this in a container, becouse things can break with time. I use distrobox. There is a script in the repo folder to automate this. You can execute it with:
-```
-curl -O https://raw.githubusercontent.com/Szybet/kobo-nia-audio/main/apps-on-kobo/script/kobo-qt-in-debian-container.sh; chmod +x kobo-qt-in-debian-container.sh; ./kobo-qt-in-debian-container.sh
-```
-For your own risk, obviously
+## 0 Container
+Its best to do this in a container, becouse things can break with time. There is a guide in `docker-container.md`
 
 ## 1. Download needed things
 As for 18.04.2022 those are working download links:
