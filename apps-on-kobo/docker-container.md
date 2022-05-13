@@ -17,6 +17,11 @@ Nvidia:
 docker run --privileged --gpus all,capabilities=utility --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --net=host --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it --entrypoint /bin/bash nvidia/cudagl:11.3.0-devel-ubuntu20.04
 ```
 
+### Get inside the container:
+```
+docker exec -it dockercontainerid bash
+```
+
 Execute this automated script:
 ```
 curl -O https://raw.githubusercontent.com/Szybet/kobo-nia-audio/main/apps-on-kobo/script/kobo-qt-in-debian-container.sh; chmod +x kobo-qt-in-debian-container.sh; ./kobo-qt-in-debian-container.sh
