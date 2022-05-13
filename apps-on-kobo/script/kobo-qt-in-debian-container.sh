@@ -64,3 +64,5 @@ sudo make install
 cd ..
 sudo mv /home/qt-bin/qt-linux-5.15.2-kobo/ .
 sudo rm -r /home/qt-bin/
+
+sudo apt-get install build-essential qtcreator qt5-qmake qtbase5-dev qtbase5-dev-tools xserver-xorg-core xinit nano mesa-utils
