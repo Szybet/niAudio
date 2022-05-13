@@ -3,7 +3,7 @@
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
 
-## 0 Container
+## 0. Container
 Its best to do this in a container, becouse things can break with time. There is a guide in `docker-container.md`
 
 ## 1. Download needed things
