@@ -51,3 +51,6 @@ docker run --privileged \
 --volume="/mnt:/mnt:rw" \
 -it --entrypoint /bin/bash nvidia/cudagl:11.3.0-devel-ubuntu20.04
 ```
+
+Fixes:
+- https://stackoverflow.com/questions/60591719/qt-creator-shows-errors-in-fresh-project-but-code-compiles-fine I hate debian
