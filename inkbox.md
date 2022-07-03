@@ -62,7 +62,7 @@ mx6ull_ntx_lpddr2_256m_mfg_defconfig
 make -j$(($(nproc)*2)) ARCH=arm CROSS_COMPILE=arm-nickel-linux-gnueabihf- mx6ull_ntx_lpddr2_256m_defconfig
 ```
 This will setup the sources according to the chosen configuration.
-Configuring with menuconfig doesn't seem to work, so you should propably leave it as it is.
+Configuring with menuconfig needs special parameters, for example: `ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-`
 Compile with:
 ```
 make -j$(($(nproc)*2)) ARCH=arm CROSS_COMPILE=arm-nickel-linux-gnueabihf-
