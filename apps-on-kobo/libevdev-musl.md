@@ -1,11 +1,13 @@
 # musl.
+run `autogen.sh` to generate `configure` if it isin't already there
+
 ```
 CHOST=arm \   
 CC=armv7l-linux-musleabihf-gcc \
 AR=armv7l-linux-musleabihf-ar \
 RANLIB=armv7l-linux-musleabihf-ranlib \
 CXX=armv7l-linux-musleabihf-g++ \
-./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-daemon/lib/libevdev/install
 ```
 
 Make sure:
