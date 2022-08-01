@@ -105,3 +105,17 @@ explanation from andi1, from inkbox discord server
 ```
 there might be protection diodes letting stuff go to vbus, probably higher voltages at the data lines than on vbus might be a problem
 ```
+
+# Modules needed for sound
+For sure:
+- snd_usb_audio
+- snd_aloop
+
+Maybe:
+- snd_usbmidi_lib
+- snd_rawmidi
+- snd_pcm
+- snd_timer
+- snd_hwdep
+- mc
+
