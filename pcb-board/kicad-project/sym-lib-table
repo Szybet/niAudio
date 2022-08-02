@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "charger-ic")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/charger/cad-files/eec.kicad_sym")(options "")(descr ""))
+  (lib (name "mosfet")(type "Legacy")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/protector/mosfet/AO3418.lib")(options "")(descr ""))
+)

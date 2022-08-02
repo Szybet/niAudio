@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "eec")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/charger/cad-files/eec.pretty")(options "")(descr ""))
+)

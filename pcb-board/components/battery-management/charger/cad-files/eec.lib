@@ -1,0 +1,38 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Microchip MCP73113-06SI/MF
+#
+DEF MCP73113-06SI_MF U 0 40 Y Y 1 L N
+F0 "U" 0 200 50 H V L CNN 
+F1 "MCP73113-06SI/MF" 0 300 50 H V L CNN 
+F2 "Microchip-MCP73113-06SI_MF-*" 0 400 50 H I L CNN 
+F3 "" 0 500 50 H I L CNN 
+F4 "revB, Jul-2009" 0 600 50 H I L CNN "Datasheet Version"
+F5 "10-Lead Plastic Dual Flat, No Lead Package (MF) - 3x3x0.9mm Body [DFN]" 0 700 50 H I L CNN "Package Description"
+F6 "revBB, Aug-2009" 0 800 50 H I L CNN "Package Version"
+F7 "IC" 0 900 50 H I L CNN "category"
+F8 "961350" 0 1000 50 H I L CNN "ciiva ids"
+F9 "f0137b9eeb54866d" 0 1100 50 H I L CNN "library id"
+F10 "Microchip" 0 1200 50 H I L CNN "manufacturer"
+F11 "DFN-MF10" 0 1300 50 H I L CNN "package"
+F12 "1300348562" 0 1400 50 H I L CNN "release date"
+F13 "5E34CB8A-9EBF-4377-A7F7-58D6D8FE722C" 0 1500 50 H I L CNN "vault revision"
+F14 "yes" 0 1600 50 H I L CNN "imported"
+DRAW
+X VSS 9 1100 -600 100 L 40 40 1 1 W 
+X VBAT 3 1100 0 100 L 40 40 1 1 W 
+X VDD 1 100 -100 100 R 40 40 1 1 W 
+X VSS 8 1100 -700 100 L 40 40 1 1 W 
+X NC 5 100 -600 100 R 40 40 1 1 P 
+X STAT 7 100 -300 100 R 40 40 1 1 C 
+X NC 6 100 -500 100 R 40 40 1 1 P 
+X PROG 10 1100 -400 100 L 40 40 1 1 I 
+X VBAT 4 1100 -100 100 L 40 40 1 1 W 
+X VDD 2 100 0 100 R 40 40 1 1 W 
+X EP 11 100 -700 100 R 40 40 1 1 W 
+S 200 100 1000 -800 1 1 0 f
+ENDDRAW
+ENDDEF
+#
+# End Library

@@ -1,0 +1,35 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# AO3418
+#
+DEF AO3418 Q 0 40 N N 1 L N
+F0 "Q" -460 100 50 H V L BNN
+F1 "AO3418" -460 -270 50 H V L BNN
+F3 "" 0 0 50 H I L BNN
+$FPLIST
+ SOT23
+ SOT-23
+$ENDFPLIST
+DRAW
+P 2 0 0 10 -144 95 -144 -100 N
+P 2 0 0 6 -144 -100 -200 -100 N
+P 2 0 0 6 0 75 -79 75 N
+P 2 0 0 6 0 100 0 75 N
+P 2 0 0 6 0 0 0 -100 N
+P 2 0 0 6 -80 0 -30 20 N
+P 2 0 0 6 -30 20 -30 -20 N
+P 2 0 0 6 -30 -20 -80 0 N
+P 2 0 0 6 -80 0 0 0 N
+P 2 0 0 6 -80 -75 -5 -75 N
+C 0 -75 5 0 0 12 N
+S -110 -100 -80 100 0 0 0 F
+X ~ 1 -300 -100 100 R 40 40 0 0 P 
+X ~ 3 0 200 100 D 40 40 0 0 P 
+X ~ 2 0 -200 100 U 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library
