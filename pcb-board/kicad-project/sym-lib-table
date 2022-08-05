@@ -1,7 +1,7 @@
 (sym_lib_table
   (lib (name "charger-ic")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/charger/cad-files/eec.kicad_sym")(options "")(descr ""))
-  (lib (name "mosfet")(type "Legacy")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/protector/mosfet/cad/AO3418.lib")(options "")(descr ""))
-  (lib (name "3.3")(type "Legacy")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/usb/hub-controller/3.3-voltage-ic/cad/AZ1117CH-3.3TRG1.lib")(options "")(descr ""))
+  (lib (name "mosfet")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/protector/mosfet/cad/AO3418.kicad_sym")(options "")(descr ""))
+  (lib (name "3.3")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/usb/hub-controller/3.3-voltage-ic/cad/AZ1117CH-3.3TRG1.kicad_sym")(options "")(descr ""))
   (lib (name "D1213A-02SR")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/usb/overvoltage-diode-protection/cad/D1213A-02SR.kicad_sym")(options "")(descr ""))
   (lib (name "AO3415")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/5V-management/powersource-switcher/cad/AO3415.kicad_sym")(options "")(descr ""))
   (lib (name "ao3415")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/5V-management/powersource-switcher/symbol-new/ao3415.kicad_sym")(options "")(descr ""))

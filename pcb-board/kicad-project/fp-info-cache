@@ -1,4 +1,11 @@
-20359441521902452
+20364419973504046
+3.3
+DIODES_AZ1117CH-3.3TRG1_0
+1.35A 3.3V LDO Reg. Current Limit SOT223
+
+0
+4
+4
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86071,3 +86078,17 @@ Microchip-MCP73113-06SI_MF-Manufacturer_Recommended
 0
 15
 12
+mosfet
+SOT-23
+
+
+0
+3
+3
+mosfet
+SOT23
+<b>SOT-23</b>
+
+0
+3
+3

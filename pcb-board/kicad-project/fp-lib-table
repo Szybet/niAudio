@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name "eec")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/charger/cad-files/eec.pretty")(options "")(descr ""))
+  (lib (name "3.3")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/usb/hub-controller/3.3-voltage-ic/cad")(options "")(descr ""))
+  (lib (name "mosfet")(type "KiCad")(uri "/mnt/HDD/Project/Public/kobo-nia-audio-clean/pcb-board/components/battery-management/protector/mosfet/cad")(options "")(descr ""))
 )
