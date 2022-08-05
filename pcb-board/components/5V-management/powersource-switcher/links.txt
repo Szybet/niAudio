@@ -1,0 +1,6 @@
+p-channel mosfet:
+
+AO3413 ALPHA & OMEGA
+https://www.tme.eu/pl/details/ao3415a/tranzystory-z-kanalem-p-smd/alpha-omega-semiconductor/
+
+and the n-channel mosfet is the same used in battery protection circuit
