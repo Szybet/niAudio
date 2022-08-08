@@ -64,3 +64,6 @@ Pause the print and insert the TPU part, glue it with "quick glue", and resume t
 ### Notes:
 - I didn't figured out yet how to prevent the cover from falling off the front
 - The hal sensor is activated even if the case is on the back. So I implemented a "Custom case option" in inkbox OS new power daemon
+
+## Shared on:
+https://www.printables.com/model/255745-kobo-nia-replacement-plate-case
