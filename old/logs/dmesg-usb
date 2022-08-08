@@ -1,0 +1,82 @@
+ci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.1.15idontknow ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.0
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+usb 1-1: new high-speed USB device number 45 using ci_hdrc
+usb 1-1: new high-speed USB device number 46 using ci_hdrc
+usb 1-1: new high-speed USB device number 47 using ci_hdrc
+usb 1-1: new high-speed USB device number 48 using ci_hdrc
+RTL871X: CurIGValue=69, EntryMinUndecoratedSmoothedPWDB = 70
+usb 1-1: new high-speed USB device number 49 using ci_hdrc
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+usb 1-1: new high-speed USB device number 50 using ci_hdrc
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_TX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+usb 1-1: new high-speed USB device number 51 using ci_hdrc
+usb 1-1: new high-speed USB device number 52 using ci_hdrc
+usb 1-1: new high-speed USB device number 53 using ci_hdrc
+usb 1-1: new high-speed USB device number 54 using ci_hdrc
+usb 1-1: new high-speed USB device number 55 using ci_hdrc
+usb 1-1: new high-speed USB device number 56 using ci_hdrc
+usb 1-1: new high-speed USB device number 57 using ci_hdrc
+RTL871X: rtw_issue_addbareq_cmd, p=0
+RTL871X: BA_starting_seqctrl = 3350 for TID=0
+RTL871X: issue_addba_req(eth0) ra=0c:54:15:1c:2c:8a tid=0
+RTL871X: OnAction_back
+RTL871X: OnAction_back, action=1
+RTL871X: agg_enable for TID=0
+usb 1-1: new high-speed USB device number 58 using ci_hdrc
+usb 1-1: new high-speed USB device number 59 using ci_hdrc
+usb 1-1: new high-speed USB device number 61 using ci_hdrc
+usb 1-1: new high-speed USB device number 62 using ci_hdrc
+usb 1-1: new high-speed USB device number 63 using ci_hdrc
+usb 1-1: new high-speed USB device number 64 using ci_hdrc
+usb 1-1: new high-speed USB device number 65 using ci_hdrc
+usb 1-1: new high-speed USB device number 66 using ci_hdrc
+usb 1-1: new high-speed USB device number 67 using ci_hdrc
+usb 1-1: new high-speed USB device number 68 using ci_hdrc
+usb 1-1: new high-speed USB device number 69 using ci_hdrc
+usb 1-1: new high-speed USB device number 70 using ci_hdrc
+RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+usb 1-1: new high-speed USB device number 71 using ci_hdrc
+usb 1-1: new high-speed USB device number 72 using ci_hdrc
+usb 1-1: new high-speed USB device number 73 using ci_hdrc
+RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_TX_TRAFFIC_LEAVE
+RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+RTL871X: adaptive_early_32k(): bcn_cnt = 101
+usb 1-1: new high-speed USB device number 86 using ci_hdrc
+usb 1-1: new high-speed USB device number 87 using ci_hdrc
+usb 1-1: new high-speed USB device number 88 using ci_hdrc
+usb 1-1: new high-speed USB device number 89 using ci_hdrc
+usb 1-1: new high-speed USB device number 91 using ci_hdrc
+usb 1-1: new high-speed USB device number 93 using ci_hdrc
+usb 1-1: new high-speed USB device number 94 using ci_hdrc
+usb 1-1: new high-speed USB device number 95 using ci_hdrc
+usb 1-1: new high-speed USB device number 96 using ci_hdrc
+usb 1-1: new high-speed USB device number 97 using ci_hdrc
+usb 1-1: new high-speed USB device number 98 using ci_hdrc
+usb 1-1: new high-speed USB device number 99 using ci_hdrc
+usb 1-1: new high-speed USB device number 100 using ci_hdrc
+PMU: mainFlowOfLowVoltage :     Noxx : cc_delta_cap is -10, cc_delta_cap_now is -77, last_cc_delta_cap is -67
+PMU: mainFlowOfLowVoltage :     Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is -289, cc_cap_mas -25011
+PMU: mainFlowOfLowVoltage :     No9 :Cap is 8725 , low_rate is 81, dsoc is 8494, capnow is 8690, capzero is 15, delta cc is -8, delta cc ori is -10
+PMU: mainFlowOfLowVoltage :     No10 :temp_mas is -321, offset_mas is -32, value is -810, final value is -8
+PMU : set_current_time2register : second is 1644942428, hour is 456928
+PMU:STATUS= 7: IBAT= -119: VSYS= 3966000: VBAT= 3989250: DSOC= 8494: RSOC= 8500: cc_delta=29: rrf= 0
+usb 1-1: new high-speed USB device number 102 using ci_hdrc
+usb 1-1: new high-speed USB device number 103 using ci_hdrc
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+usb 1-1: new high-speed USB device number 104 using ci_hdrc
+usb 1-1: new high-speed USB device number 105 using ci_hdrc
+usb 1-1: new high-speed USB device number 106 using ci_hdrc
+usb 1-1: new high-speed USB device number 107 using ci_hdrc
