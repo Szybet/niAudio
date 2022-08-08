@@ -15,7 +15,7 @@ then solder some pogo pins to it, at arround 30 degrees. Make the connection sol
 i also added some epoxy to make it more solid. Soldering tin is "soft" so if you will connect / disconnect many times, the pins will get loose and break with time.
 ![IMG_20220808_190740](https://user-images.githubusercontent.com/53944559/183511185-f3669988-ae3a-4138-a3b9-e70fda2fbe8c.jpg)
 
-I use those "arduino cables" female connectors without the plastic because space limitations.
+I use those "arduino cables" female connectors without the plastic because space limitations to connect to the device.
 
 ![IMG_20220809_003559](https://user-images.githubusercontent.com/53944559/183526459-93a4f503-8611-431e-a550-8aa9252c4ebe.jpg)
 
