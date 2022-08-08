@@ -1,1 +1,0 @@
-../common/ntx_hwconfig.h
