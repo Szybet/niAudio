@@ -30,3 +30,6 @@ add_executable(inkbox-power-deamon ${fileSrc})
 
 target_link_libraries(inkbox-power-deamon libevdev.so.2.3.0)
 ```
+
+***
+the same way / command can the `time` gnu command be compiled
