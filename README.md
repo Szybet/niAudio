@@ -7,6 +7,7 @@ Kobo nia ereader with audio added, using inkbox os
 - images - mostly images of the inside of kobo nia
 - old - old things like stock kernel for the nia with changes for actually compiling it, some logs etc
 - pcb-board - PCB + schematic for connecting the PCM2704 sound card
+- discord-exports - exports of chat from discord, where progress was made. Thanks to all people that helped
 - links.md - resources link that were used for research for this project
 - noted.md - notes, discoveries what were important for this project
 - inkbox.md - uncomplete guide for installing / creating inkbox os for the nia
