@@ -31,5 +31,17 @@ add_executable(inkbox-power-deamon ${fileSrc})
 target_link_libraries(inkbox-power-deamon libevdev.so.2.3.0)
 ```
 
+and for arm-kobo-linux-gnueabihf
+```
+CHOST=arm \     
+CC=arm-kobo-linux-gnueabihf-gcc \
+AR=arm-kobo-linux-gnueabihf-ar \
+RANLIB=arm-kobo-linux-gnueabihf-ranlib \
+CXX=arm-kobo-linux-gnueabihf-g++ \
+LINK=arm-kobo-linux-gnueabihf-g++ \
+LD=arm-kobo-linux-gnueabihf-ld \
+ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- ./configure --host=arm-linux-gnueabihf --prefix=/tmp/install
+```
+
 ***
 the same way / command can the `time` gnu command be compiled
