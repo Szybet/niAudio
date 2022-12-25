@@ -13,7 +13,7 @@ This command does that the battery isin't used, it isin't even charged but USB p
 ```
 i2cset -y -f 3 0x32 0xb3 0x20
 ```
-This stops using USB completely ( can't be changed back without disconnecting usb port )
+This stops using USB completely ( can't be changed back without reboot )
 ```
 i2cset -y -f 3 0x32 0xb3 0x10
 ```
