@@ -30,3 +30,6 @@ Failures:
 - IC for usb hub is stupid and expensive - requires 3.3V, and only 1.1 USB compatible. FE1.1S Would be better
 
 #### Should have looked at the example schematic a bit more.
+
+## Update:
+- Resistor labeled as 5K above AP9101CK ( to which a jumper goes ) should be 3.3K to avoid sensitive over current protection
