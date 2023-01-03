@@ -32,4 +32,4 @@ Failures:
 #### Should have looked at the example schematic a bit more.
 
 ## Update:
-- Resistor labeled as 5K above AP9101CK ( to which a jumper goes ) should be 3.3K to avoid sensitive over current protection
+- Resistor labeled as 5K above AP9101CK ( to which a jumper goes ) should be 5K, or even higher. Lower Resistor values cause over current protection to appear 
