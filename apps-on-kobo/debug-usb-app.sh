@@ -4,4 +4,6 @@ echo host > /sys/kernel/debug/ci_hdrc.0/role
 killall inkbox
 killall inkbox-bin
 fbink -c
+echo 2 > /sys/class/graphics/fb0/rotate
+echo 2 > /kobo/sys/class/graphics/fb0/rotate
 chroot /kobo
