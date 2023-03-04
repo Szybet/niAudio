@@ -36,6 +36,10 @@ make install
 ```
 
 ## Qt building
+```diff
+- If too much changed, modified, or even the same, a new compiled qt can be incompatible with the one in inkbox.
+- If random segmentation faults appear, just copy qt from gui bundle repo.
+```
 Unpack the tarball, then:
 ```
 mkdir qtbase/mkspecs/linux-kobo-gnueabihf-g++
