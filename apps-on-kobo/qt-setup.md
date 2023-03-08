@@ -3,6 +3,9 @@
 Everything thanks to Rain92 from his UltimateMangaReader project
 - https://github.com/Rain92/UltimateMangaReader
 
+## Warning
+If too much changed, modified, or even the same, a new compiled qt and toolchain can be incompatible with the one in inkbox. If you want to develop apps specifically for inkbox, ask the developers to share the toolchain and qt apps. You will need to compile qt anyways, because qmake has some in coded paths. just see `strings $(whereis qmake)`. For reference of this madness and pain, see the file `Qt incompatibility madness, Discord inkbox dev chat.html`
+
 ## 0. Container
 Its best to do this in a container, becouse things can break with time. There is a guide in `docker-container.md`
 
@@ -14,7 +17,7 @@ As for 18.04.2022 those are working download links:
 - qt5-kobo-platform-plugin: https://github.com/Rain92/qt5-kobo-platform-plugin
 
 ## 2. koxtoolchain
-First, install dependiences specified in the readme, then just launch `./gen-tc.sh kobo` in the repository. it should work without problem
+First, install dependiences specified in the readme, then just launch `./gen-tc.sh kobo` in the repository. it should work without problem. In Fedora you propably need the `ncurses-devel` package too.
 
 make sure it created `x-tools` in your home directory
 ## 3. OpenSSH
@@ -36,10 +39,6 @@ make install
 ```
 
 ## Qt building
-```diff
-- If too much changed, modified, or even the same, a new compiled qt can be incompatible with the one in inkbox.
-- If random segmentation faults appear, just copy qt from gui bundle repo.
-```
 Unpack the tarball, then:
 ```
 mkdir qtbase/mkspecs/linux-kobo-gnueabihf-g++
