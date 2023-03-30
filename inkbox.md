@@ -115,8 +115,18 @@ First, follow the steps in the "Bootloader" part to set up InkBox's "kernel" rep
 
 Change directory into `/home/build/inkbox/kernel`, then run:
 ```
-env GITDIR="${PWD}" TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
+env -i GITDIR="${PWD}" TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
 ```
+
+if **something** breaks:
+```
+/tmp/cccPPzwF.s: Assembler messages:
+/tmp/cccPPzwF.s:888: Error: .err encountered
+/tmp/cccPPzwF.s:904: Error: .err encountered
+  CC      fs/ext3/xattr.o
+make[2]: *** [scripts/Makefile.build:258: fs/fat/dir.o] Error 1
+```
+Use a debian container ( distrobox makes it easy ). Arch is weird sometimes
 
 **2. From source**
 
