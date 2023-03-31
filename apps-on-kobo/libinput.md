@@ -40,8 +40,6 @@ CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
 ./configure --host=arm-linux-gnueabihf --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ --disable-all-programs --enable-libblkid --enable-blkid
 ```
 
-
-
 ### Libudev - eudev
 ```
 git clone https://github.com/eudev-project/eudev
@@ -59,7 +57,7 @@ CXX=arm-kobo-linux-gnueabihf-g++ \
 LINK=arm-kobo-linux-gnueabihf-g++ \
 LD=arm-kobo-linux-gnueabihf-ld \
 ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
-./configure --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -disable-selinux --disable-manpages
+./configure --host=arm-linux-gnueabihf --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -disable-selinux --disable-manpages
 ```
 edit `src/udev/udev-builtin-input_id.c` and add
 ```
