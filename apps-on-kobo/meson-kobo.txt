@@ -1,0 +1,17 @@
+[binaries]
+c = 'arm-kobo-linux-gnueabihf-gcc'
+cpp = 'arm-kobo-linux-gnueabihf-g++'
+ar = 'arm-kobo-linux-gnueabihf-ar'
+strip = 'arm-kobo-linux-gnueabihf-strip'
+pkgconfig = '/usr/bin/pkg-config'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'arm'
+endian = 'little'
+
+[properties]
+sys_root = '/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot'
+pkg_config_libdir = '/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/pkgconfig'
+root = '/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot'
