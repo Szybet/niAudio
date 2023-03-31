@@ -133,3 +133,35 @@ in meson option:
 - enable-wayland to false
 
 the rest is as in libinput with meson
+
+### Changes for Qt:
+```
+export SYSROOT=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/
+```
+```
+./configure --recheck-all -opensource -confirm-license -release -verbose \
+ -prefix /mnt/onboard/.adds/${QTDIR} \
+ -extprefix /home/build/inkbox/compiled-binaries/qt-bin/${QTDIR} \
+ -xplatform linux-kobo-gnueabihf-g++ \
+ -sysroot ${SYSROOT} \
+ -openssl-linked OPENSSL_PREFIX="${SYSROOT}/usr" \
+ -qt-libjpeg -qt-zlib -qt-libpng -qt-freetype -qt-harfbuzz -qt-pcre -sql-sqlite -linuxfb \
+ -no-sse2 -no-xcb -no-xcb-xlib -no-tslib -no-icu -no-iconv -no-dbus \
+ -nomake tests -nomake examples -no-compile-examples -no-opengl \
+ -skip qtx11extras -skip qtwayland -skip qtwinextras -skip qtmacextras -skip qtandroidextras \
+ -skip qttools -skip qtdoc -skip qtlocation -skip qtremoteobjects -skip qtconnectivity -skip qtgamepad \
+ -skip qt3d -skip qtquick3d -skip qtquickcontrols -skip qtsensors -skip qtspeech -skip qtdatavis3d \
+ -skip qtpurchasing -skip qtserialbus -skip qtserialport -skip multimedia -skip qtquicktimeline -skip qtlottie \
+ -skip activeqt -skip qtscript -skip qtxmlpatterns -skip qtscxml -skip qtvirtualkeyboard \
+ -skip qtwebengine -skip qtwebview -skip qtwebglplugin \
+ -no-cups -no-pch -no-libproxy \
+ -no-feature-printdialog -no-feature-printer -no-feature-printpreviewdialog -no-feature-printpreviewwidget \
+ -libudev -evdev -libinput -xkbcommon
+```
+look out for errors with xkbcommon, if it all passed then good. i needed to do:
+```
+cd /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/
+cp -r /usr/local/lib/pkgconfig/* usr/lib/pkgconfig
+cp -r lib/pkgconfig/* usr/lib/pkgconfig
+sudo cp ./include/libudev.h usr/include
+```
