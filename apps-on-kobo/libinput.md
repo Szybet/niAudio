@@ -121,3 +121,15 @@ ninja
 ```
 meson install --destdir /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot
 ```
+
+Now for Qt, additionally we need: 
+### libxkbcommon
+```
+git clone https://github.com/xkbcommon/libxkbcommon
+```
+in meson option:
+- enable-x11 to false
+- enable-docs to false
+- enable-wayland to false
+
+the rest is as in libinput with meson
