@@ -39,6 +39,8 @@ make install
 ```
 
 ## Qt building
+Changes not included here, so look here: https://github.com/Szybet/niAudio/blob/main/apps-on-kobo/libinput.md
+
 Unpack the tarball, then:
 ```
 mkdir qtbase/mkspecs/linux-kobo-gnueabihf-g++
