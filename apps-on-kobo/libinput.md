@@ -1,4 +1,8 @@
 ## Guide for bare libinput support in Qt5
+run:
+```
+export PATH=$PATH:/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/
+```
 
 ### kmod
 ```
@@ -68,11 +72,34 @@ edit `src/udev/udev-builtin-input_id.c` and add
 ```
 this is fetched from other files, libraries: mtdev, libwacom. linux/input-event-codes.h
 
+in `src/v4l_id/v4l_id.c` remove those all lines in main and add a `return -1`, maybe a message saying this file is cursed too.
 
-run:
+idk why, but this is needed:
 ```
-export PATH=$PATH:/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/
+C_INCLUDE_PATH=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/ make -j 8
 ```
+
+### mtdev
+```
+git clone https://github.com/rydberg/mtdev
+```
+```
+CHOST=arm CC=arm-kobo-linux-gnueabihf-gcc \
+AR=arm-kobo-linux-gnueabihf-ar \
+RANLIB=arm-kobo-linux-gnueabihf-ranlib \
+CXX=arm-kobo-linux-gnueabihf-g++ \
+LINK=arm-kobo-linux-gnueabihf-g++ \
+LD=arm-kobo-linux-gnueabihf-ld \
+ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
+./configure --host=arm-linux-gnueabihf --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/
+```
+
+## libevdev 
+```
+git clone https://gitlab.freedesktop.org/libevdev/libevdev
+```
+the command for configure is the same as in mtdev, the regular one
+
 
 ### Libinput
 ```
@@ -85,5 +112,12 @@ in meson options for libinput set
 
 then run:
 ```
-DESTDIR=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot meson setup --cross-file ../meson-kobo.txt buil
+DESTDIR=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot meson setup --cross-file ../meson-kobo.txt build
+```
+```
+cd build
+ninja
+```
+```
+meson install --destdir /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot
 ```
