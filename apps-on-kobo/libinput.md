@@ -1,5 +1,47 @@
 ## Guide for bare libinput support in Qt5
 
+### kmod
+```
+git clone https://github.com/lucasdemarchi/kmod
+```
+run autogen, then
+```
+CHOST=arm CC=arm-kobo-linux-gnueabihf-gcc \
+AR=arm-kobo-linux-gnueabihf-ar \
+RANLIB=arm-kobo-linux-gnueabihf-ranlib \
+CXX=arm-kobo-linux-gnueabihf-g++ \
+LINK=arm-kobo-linux-gnueabihf-g++ \
+LD=arm-kobo-linux-gnueabihf-ld \
+ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
+./configure --host=arm-linux-gnueabihf --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/
+```
+well and
+```
+make -j 8
+sudo make install
+```
+
+### blkid - util-linux
+get an older version
+```
+wget https://cdn.kernel.org/pub/linux/utils/util-linux/v2.36/util-linux-2.36-rc1.tar.gz
+```
+well you know, then
+```
+CHOST=arm \
+CC=arm-kobo-linux-gnueabihf-gcc \
+AR=arm-kobo-linux-gnueabihf-ar \
+RANLIB=arm-kobo-linux-gnueabihf-ranlib \
+CXX=arm-kobo-linux-gnueabihf-g++ \
+LINK=arm-kobo-linux-gnueabihf-g++ \
+LD=arm-kobo-linux-gnueabihf-ld \
+ARCH=arm \
+CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
+./configure --host=arm-linux-gnueabihf --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ --disable-all-programs --enable-libblkid --enable-blkid
+```
+
+
+
 ### Libudev - eudev
 ```
 git clone https://github.com/eudev-project/eudev
@@ -17,7 +59,7 @@ CXX=arm-kobo-linux-gnueabihf-g++ \
 LINK=arm-kobo-linux-gnueabihf-g++ \
 LD=arm-kobo-linux-gnueabihf-ld \
 ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- \
-./configure --host=arm-linux-gnueabihf --prefix=/mnt/HDD/Project/qt-test/eudev/buildroot -disable-selinux --disable-manpages
+./configure --prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -disable-selinux --disable-manpages
 ```
 edit `src/udev/udev-builtin-input_id.c` and add
 ```
