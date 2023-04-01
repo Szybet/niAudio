@@ -174,3 +174,7 @@ to ignore devices:
 ```
 ACTION=="add|change", SUBSYSTEM=="input", KERNEL=="event[0-1]*", ATTR{enabled}="0", ATTR{authorized}="0", ENV{LIBINPUT_IGNORE_DEVICE}="1"
 ```
+to set a custom keymap:
+```
+XKB_DEFAULT_LAYOUT=us
+```
