@@ -165,3 +165,12 @@ cp -r /usr/local/lib/pkgconfig/* usr/lib/pkgconfig
 cp -r lib/pkgconfig/* usr/lib/pkgconfig
 sudo cp ./include/libudev.h usr/include
 ```
+***
+to debug apps:
+```
+QT_DEBUG_PLUGINS=1 QT_LOGGING_RULES=qt.qpa.input=true
+```
+to ignore devices:
+```
+ACTION=="add|change", SUBSYSTEM=="input", KERNEL=="event[0-1]*", ATTR{enabled}="0", ATTR{authorized}="0", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+```
