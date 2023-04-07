@@ -18,3 +18,5 @@
 Congratulations, now if saturn alligns with mars in a specific 15 cm angle between moon your fonts will be working
 
 ._.
+
+UPDATE: Actually, `LC_ALL=en_US` sometimes breaks things
