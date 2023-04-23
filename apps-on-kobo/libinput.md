@@ -162,7 +162,7 @@ export SYSROOT=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm
 look out for errors with xkbcommon, if it all passed then good. i needed to do:
 ```
 cd /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/
-cp -r /usr/local/lib/pkgconfig/* usr/lib/pkgconfig
+cp -r usr/local/lib/pkgconfig/* usr/lib/pkgconfig
 cp -r lib/pkgconfig/* usr/lib/pkgconfig
 sudo cp ./include/libudev.h usr/include
 ```
