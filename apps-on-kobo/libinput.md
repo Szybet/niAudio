@@ -109,6 +109,7 @@ git clone https://gitlab.freedesktop.org/libinput/libinput/
 in meson options for libinput set
 - libwacom to false
 - tests to false
+- debug-gui to false
 
 then run:
 ```
