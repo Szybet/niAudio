@@ -9,6 +9,8 @@ CM108B
 ## Kobo hardware:
 http://gethighstayhigh.co.uk/kobo-self-build/ - modding kobo for xcsoar
 
+https://misc.andi.de1.cc/kobo/ - low level andi's notes
+
 ## Kobo Software:
 https://www.linux-magazine.com/Online/Features/Basic-Hacks-for-Kobo-E-Readers - guide for beginning with kobo
 
