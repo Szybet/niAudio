@@ -56,3 +56,11 @@ Cflags: -I${includedir}
 Libs: -L${libdir} -lpam
 ```
 
+and
+https://github.com/linux-pam/linux-pam/issues/406
+
+and in `./arm-kobo-linux-gnueabihf/sysroot/usr/include/linux/quota.h` comment out the line:
+```
+./arm-kobo-linux-gnueabihf/sysroot/usr/include/linux/quota.h
+```
+
