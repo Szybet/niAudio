@@ -20,3 +20,7 @@ then
 ```
 git checkout tags/v1.4.0
 ```
+also for karchive:
+```
+cp arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/usr/local/include/zstd.h arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include
+```
