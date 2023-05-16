@@ -1,3 +1,7 @@
+idk when:
+https://www.linuxfromscratch.org/blfs/view/systemd/general/duktape.html
+
+
 https://github.com/GNOME/glib
 
 glib goes normally, then
@@ -12,7 +16,7 @@ https://github.com/linux-pam/linux-pam/tree/v1.1.6
 
 change to this tag, no additional configure arguments
 
-pc files arent generated, use these:
+if pc files arent generated, use these:
 `pam_misc.pc`
 ```
 prefix=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot
