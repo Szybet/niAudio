@@ -81,7 +81,7 @@ meson options for polkit:
 option('session_tracking', type: 'combo', choices: ['libsystemd-login', 'libelogind', 'ConsoleKit'], value: 'ConsoleKit', description: 'session tracking (libsystemd-login/libelogind/ConsoleKit)')
 option('systemdsystemunitdir', type: 'string', value: '', description: 'custom directory for systemd system units')
 
-option('libs-only', type: 'boolean', value: true, description: 'Only build libraries (skips building polkitd)')
+option('libs-only', type: 'boolean', value: false, description: 'Only build libraries (skips building polkitd)')
 option('polkitd_user', type: 'string', value: 'polkitd', description: 'User for running polkitd (polkitd)')
 
 option('authfw', type: 'combo', choices: ['pam', 'shadow', 'bsdauth'], value: 'pam', description: 'Authentication framework (pam/shadow)')
@@ -99,4 +99,7 @@ option('gtk_doc', type: 'boolean', value: false, description: 'use gtk-doc to bu
 option('man', type: 'boolean', value: false, description: 'build manual pages')
 option('js_engine', type: 'combo', choices: ['mozjs', 'duktape'], value: 'duktape', description: 'javascript engine')
 ```
+
+to build polkit:
+`DESTDIR=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot CFLAGS=-lrt  meson setup --cross-file ../meson-kobo.txt build`
 
