@@ -2,6 +2,8 @@
 
 https://user-images.githubusercontent.com/53944559/224502369-85502364-8932-49f3-ae0e-66e163dd3953.mp4
 
+updated demo: https://www.youtube.com/watch?v=Uz1CcqDgtQU
+
 it's the [platinet K120](https://sklep.platinet.pl/pl/p/Klawiatura-Platinet-K120-US/7711) with a full custom case, some m4 screws for hinges, many magnets and some custom cables to make it work
 
 To make the keyboard quiter, I used [silicone grease](https://www.tecmaxx.pl/produkty/smar-silikonowy/) under the "butterfly" caps, and removed metal wires under bigger buttons. Also some regular black silicone to all gaps.
