@@ -10,7 +10,7 @@ To make the keyboard quiter, I used [silicone grease](https://www.tecmaxx.pl/pro
 
 "Sister" repos:
 - https://github.com/Szybet/FeatherNotes-inkbox - The app modified and used for this purpuse. Cool app
-- https://github.com/Szybet/Charger-controller - used with IPD ( 10-chargerController), It's the program launched at the beggining of the video. Set's the current and changes mode to host
+- https://github.com/Szybet/Charger-controller - used with IPD ( 10-chargerController), It's the program launched at the beggining of the video. Set's the current and changes mode to host. WARNING: Works only on the Nia A model, anyway could burn your device down
 - https://github.com/Szybet/feather-joplin-bridge - Description in the name
 - https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin - Modified for keyboard and **mouse** support
 - https://github.com/Szybet/sketch-inkbox - The sketch app that failed to launch ;p
