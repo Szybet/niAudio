@@ -211,3 +211,18 @@ killall -9 inkbox.sh inkbox inkbox-bin; sleep 1; killall -9 inkbox.sh inkbox ink
 chroot /kobo
 env LD_LIBRARY_PATH=qt-linux-5.15.2-kobo/lib QT_QPA_PLATFORM=kobo ./app
 ```
+## Some debugging examples
+Enter the chroot
+```
+env DEVICE="$(cat /opt/inkbox_device)" DEVICE_CODENAME="$(/bin/kobo_config.sh)" LD_LIBRARY_PATH="/lib:system/lib" PATH="/system-bin:/app-bin" system/bin/unshare -p -P /mnt/onboard/onboard/.apps/feathernotes/feathernotes/proc -- system/lib/ld-musl-armhf.so.1 system/bin/chroot --userspec=user:user /mnt/onboard/onboard/.apps/feathernotes/feathernotes/ /system-bin/sh
+```
+
+Regular launch
+```
+env PATH="/app-bin:/system-bin" LD_LIBRARY_PATH="/system-lib/lib:/system-lib/qt/lib:/app-lib" QT_QPA_PLATFORM="kobo:debug:mouse" QT_PLUGIN_PATH="/system-lib/qt/plugins/" QT_LOGGING_RULES=qt.qpa.*=true QT_DEBUG_PLUGINS=1 /system-lib/lib/ld-linux-armhf.so.3 /app-bin/feathernotes.bin
+```
+
+Launch with strace and all Qt debug informations:
+```
+env PATH="/app-bin:/system-bin" LD_LIBRARY_PATH="/system-lib/lib:/system-lib/qt/lib:/app-lib" QT_QPA_PLATFORM="kobo:debug:mouse" QT_PLUGIN_PATH="/system-lib/qt/plugins/" QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUGINS=1 /app-bin/resources/strace -o /app-data/strace.txt /system-lib/lib/ld-linux-armhf.so.3 /app-bin/feathernotes.bin
+```
