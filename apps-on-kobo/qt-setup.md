@@ -1,3 +1,5 @@
+# If you don't care about the internals, and want to tinker with Inkbox, use this: https://github.com/Kobo-InkBox/compiled-binaries
+
 # How to setup Qt for inkbox, from ground up. Fixes and tutorial
 
 Everything thanks to Rain92 from his UltimateMangaReader project
