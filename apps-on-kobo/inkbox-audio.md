@@ -2,7 +2,7 @@ How to add audio to InkBox 2.0
 ```
 ifsctl mnt rootfs rw
 apk update
-apk add --no-cache alsa-utils alsa-lib alsaconf
+apk add --no-cache alsa-utils alsa-lib alsaconf musl
 ```
 Propably too:
 ```
