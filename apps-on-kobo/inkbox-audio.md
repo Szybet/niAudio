@@ -8,6 +8,11 @@ Propably too:
 ```
 addgroup root audio
 ```
+To check if sound card is detected, check if dmesg contains:
+```
+[44399.075419] usbcore: registered new interface driver snd-usb-audio
+```
+or `/dev/ contains something new in `/dev/snd/` or a new `/dev/hidraw*` device
 
 
 usefull links:
