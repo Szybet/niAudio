@@ -12,7 +12,13 @@ To check if sound card is detected, check if dmesg contains:
 ```
 [44399.075419] usbcore: registered new interface driver snd-usb-audio
 ```
-or `/dev/ contains something new in `/dev/snd/` or a new `/dev/hidraw*` device
+or `/dev/` contains something new in `/dev/snd/` or a new `/dev/hidraw*` device
+
+If not, add this to your kernel config:
+```
+--- USB sound devices
+<* >USB Audio/MIDI driver
+```
 
 
 usefull links:
