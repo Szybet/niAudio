@@ -28,8 +28,16 @@ mkdir -p /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-
 
 # Nlohman json
 
-````
+```
 git clone https://github.com/nlohmann/json.git
+```
+easy
+
+
+# Libevent
+
+```
+git clone https://github.com/libevent/libevent.git
 ```
 easy
 
