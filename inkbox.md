@@ -117,6 +117,10 @@ Change directory into `/home/build/inkbox/kernel`, then run:
 ```
 env -i GITDIR="${PWD}" TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
 ```
+Post 2.0 init fix:
+```
+env -i GITDIR="${PWD}" TOOLCHAINDIR="${PWD}/toolchain/arm-nickel-linux-gnueabihf/" THREADS=$(($(nproc)*2)) TARGET=arm-nickel-linux-gnueabihf INIT_GCC="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-gcc" INIT_STRIP="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-strip" scripts/build_kernel.sh n306 root
+```
 
 if **something** breaks:
 ```
